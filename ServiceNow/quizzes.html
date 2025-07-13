@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quiz</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header>
+    <h1>Quiz</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tutorials.html">Tutorials</a>
+      <a href="quizzes.html">Quizzes</a>
+      <a href="api.html">API Explorer</a>
+    </nav>
+  </header>
+  <main>
+    <h2>ServiceNow Basics Quiz</h2>
+    <p>What is an incident in ServiceNow?</p>
+    <ul>
+      <li><button onclick="checkAnswer(this, false)">A service request</button></li>
+      <li><button onclick="checkAnswer(this, true)">An unplanned interruption to IT service</button></li>
+      <li><button onclick="checkAnswer(this, false)">A maintenance schedule</button></li>
+    </ul>
+    <p id="quiz-result"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

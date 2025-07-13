@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printer Setup</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>Printer Setup</h1>
+            <a href="troubleshooting.html" class="btn-secondary" style="text-decoration: none; padding: 0.5rem 1rem; font-size: 0.9rem;">← Back to Troubleshooting</a>
+        </div>
+    </header>
+    <main>
+        <nav style="text-align:center; margin-bottom:2rem;">
+            <a href="#windows" class="btn-primary" style="margin-right:1rem;">Windows/PC</a>
+            <a href="#mac" class="btn-secondary">Mac</a>
+        </nav>
+        <ul style="text-align:center; margin-bottom:2.5rem; color:#2563eb; font-weight:500; font-size:1.08rem; list-style: none; padding: 0;">
+            <li>C5740 2nd Floor: 192.168.130.31</li>
+            <li>C265 3rd Floor: 192.168.130.137</li>
+            <li>ACC Network Printer: 192.168.135.51</li>
+        </ul>
+        <section id="windows">
+            <h2>Printer Setup for Windows/PC</h2>
+
+            <h3>Method 1</h3>
+            <div class="instruction-step" style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+                <div style="flex: 1;">
+                    <p><strong>Step 1:</strong> In the Windows search bar, open <b>"Run"</b> and type in <b>"\\aac-boston-dc1"</b>.
+                    <br><br>
+                    If you open the "Run" application, a small window in the bottom left corner of your screen will appear. Type in "\\aac-boston-dc1" and press Enter.
+                    </p>
+                </div>
+                <img src="../images/print-run.png" width="400" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            </div>
+
+            <div class="instruction-step" style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+                <div style="flex: 1;">
+                    <p><strong>Step 2:</strong> <b>Right click the printer(s)</b> you want to add and <b>Connect</b>.
+                    <br><br>Right click on the printer you want to use and hit connect. It will take a few seconds, then you can start printing.
+                    </p>
+                </div>
+                <img src="../images/print-screen.png" width="600" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            </div>
+
+            <h3>Method 2</h3>
+            <div class="instruction-step" style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+                <div style="flex: 1;">
+                    <p><strong>Step 1:</strong> Open the Start menu and select <b>Settings</b>.
+                    <br><br>
+                    You can find settings by either searching for it in the Windows search baror clicking the Windows button then Settings icon.
+                    </p>
+                </div>
+                <img src="../images/print-step1.png" width="500" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            </div>
+
+            <div class="instruction-step" style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+                <div style="flex: 1;">
+                    <p><strong>Step 2:</strong> Navigate to <b>Printers and Scanners</b> and select <b>Add device</b>. Choose <b>Add manually</b>.
+                    <br><br>Click "Bluetooth & devices" or use the search bar in the top left corner, then select "Add device" in the top right corner.
+                    <br><br>After waiting for a few seconds, there should be an option that says "The printer that I want isn't listed", allowing you to "Add manually".
+                    </p>
+                </div>
+                <img src="../images/print-step2.png" width="600" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            </div>
+
+            <div class="instruction-step" style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+                <div style="flex: 1;">
+                    <p><strong>Step 3:</strong> Add your printer using an <b>IP address or hostname</b>. Input the <b>TCP/IP Device</b> IP address and <b>name your printer</b>. Check the <b>Query</b> box.
+                    <br><br>Select the option bubble to "Add a printer using an IP address or hostname" then click "Next".
+                    <br><br>Change the Device type to "TCP/IP Device", enter the IP address, and change the name of the printer to whatever you'd like.
+                    <br><br>Make sure to check the "Query the printer and auotmatically select the driver to use" box.
+                    </p>
+                </div>
+                <img src="../images/print-step3.png" width="500" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            </div>
+
+            <div class="instruction-step" style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+                <div style="flex: 1;">
+                    <p><strong>Step 4a:</strong> Select the <b>Canon Generic Plus PCL6</b> driver user that driver.
+                    <br><br>If the "Canon Generic Plus PCL6" driver does not show up, move to step 4b.
+                    <br><br>Otherwise, click "Next" and "Use the driver that is currently installed".
+                    <br><br>Move on to step 5.
+                    </p>
+                </div>
+                <img src="../images/print-step4a.png" width="600" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            </div>
+
+            <div class="instruction-step" style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+                <div style="flex: 1;">
+                    <p><strong>Step 4b:</strong> Add the <b>Canon 5740 driver</b>.
+                    <br><br>Download the driver "here" and keep it somewhere accessible in your files. 
+                    <br><br>Click "Have disk" and "Browse", then select the driver fiel you downloaded and click "Open" then "OK".
+                    <br><br>Move on to step 5.
+                    </p>
+                </div>
+                <img src="../images/print-step4b.png" width="600" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            </div>
+
+            <div class="instruction-step" style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+                <div style="flex: 1;">
+                    <p><strong>Step 5:</strong> <b>Name</b> the printer and <b>Finish</b>.
+                    <br><br>After clicking "Next", give the printer whatever name you'd like, share the printer on the network or not, and click "Finish".
+                    </p>
+                </div>
+                <img src="../images/print-step5.png" width="600" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            </div>
+
+        </section>
+        <hr style="margin:3rem 0;">
+        <section id="mac">
+            <h2>Printer Setup for Mac</h2>
+            <div class="instruction-step" style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+                <div style="flex: 1;">
+                    <p><strong>Step 1:</strong> Click the Apple menu and select <b>System Preferences</b>.</p>
+                </div>
+                <img src="../images/mac-step1.png" width="300" height="200" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            </div>
+
+            <div class="instruction-step" style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+                <div style="flex: 1;">
+                    <p><strong>Step 2:</strong> Navigate on <b>Printers & Scanners</b> and <b>Add New Printer</b>.</p>
+                </div>
+                <img src="../images/mac-step2.png" width="300" height="200" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            </div>
+
+            <div class="instruction-step" style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+                <div style="flex: 1;">
+                    <p><strong>Step 3:</strong> Enter the <b>IP Address</b> of the printer you want to add and <b>name</b> it.
+                    Make sure the<b>___</b> is <b>LPD</b> and <b>___</b> is Canon.</p>
+                </div>
+                <img src="../images/mac-step3.png" width="300" height="200" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            </div>
+
+            <div class="instruction-step" style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+                <div style="flex: 1;">
+                    <p><strong>Step 4:</strong> Click to <b>Printers & Scanners</b> to add a new printer.</p>
+                </div>
+                <img src="../images/mac-step4.png" width="300" height="200" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            </div>
+            <!-- Add more steps as needed -->
+        </section>
+    </main>
+</body>
+</html>
