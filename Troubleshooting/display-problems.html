@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Problems - IT Info Center</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/pages/troubleshooting.css">
+</head>
+<body>
+    <header>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>Display Problems</h1>
+            <a href="troubleshooting.html" class="btn-secondary" style="text-decoration: none; padding: 0.5rem 1rem; font-size: 0.9rem;">← Back to Troubleshooting</a>
+        </div>
+    </header>
+    <main>
+        <section class="troubleshoot-header">
+            <h2>Display Problems & Solutions</h2>
+            <p>Comprehensive guide for troubleshooting display issues, from basic connectivity to advanced problems</p>
+        </section>
+        
+        <div class="troubleshoot-container">
+            <div class="troubleshoot-grid">
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-high">Hardware</span>
+                    <h3><span class="troubleshoot-icon">🖥️</span>No Display</h3>
+                    <p>Monitor shows nothing or "No Signal" message. Check connections and power.</p>
+                    <button class="troubleshoot-btn" onclick="toggleSolution('no-display')">View Solution</button>
+                    <div id="no-display" class="solution-details" style="display:none;">
+                        <h4>Step-by-Step Solution:</h4>
+                        <ol>
+                            <li>Check power cable connection to monitor</li>
+                            <li>Verify HDMI/DP cable is securely connected</li>
+                            <li>Try a different cable or port</li>
+                            <li>Restart computer and monitor</li>
+                            <li>Check monitor input source settings</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-medium">Software</span>
+                    <h3><span class="troubleshoot-icon">📱</span>Wrong Resolution</h3>
+                    <p>Display appears stretched, blurry, or doesn't fit screen properly.</p>
+                    <button class="troubleshoot-btn" onclick="toggleSolution('resolution')">View Solution</button>
+                    <div id="resolution" class="solution-details" style="display:none;">
+                        <h4>Step-by-Step Solution:</h4>
+                        <ol>
+                            <li>Right-click desktop → Display Settings</li>
+                            <li>Select correct monitor</li>
+                            <li>Choose recommended resolution</li>
+                            <li>Update graphics drivers if needed</li>
+                            <li>Test different refresh rates</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-low">Hardware</span>
+                    <h3><span class="troubleshoot-icon">📷</span>Camera Issues</h3>
+                    <p>Webcam not working in Teams, Zoom, or other applications.</p>
+                    <button class="troubleshoot-btn" onclick="toggleSolution('camera')">View Solution</button>
+                    <div id="camera" class="solution-details" style="display:none;">
+                        <h4>Step-by-Step Solution:</h4>
+                        <ol>
+                            <li>Check camera privacy settings in Windows</li>
+                            <li>Test camera in Device Manager</li>
+                            <li>Update camera drivers</li>
+                            <li>Check app permissions</li>
+                            <li>Restart camera service</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-medium">Hardware</span>
+                    <h3><span class="troubleshoot-icon">⚡</span>Screen Flickering</h3>
+                    <p>Display flickers, flashes, or shows artifacts during use.</p>
+                    <button class="troubleshoot-btn" onclick="toggleSolution('flickering')">View Solution</button>
+                    <div id="flickering" class="solution-details" style="display:none;">
+                        <h4>Step-by-Step Solution:</h4>
+                        <ol>
+                            <li>Update graphics drivers</li>
+                            <li>Check cable connections</li>
+                            <li>Test with different refresh rate</li>
+                            <li>Disable hardware acceleration</li>
+                            <li>Check for Windows updates</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-low">Software</span>
+                    <h3><span class="troubleshoot-icon">🖱️</span>Mouse Lag</h3>
+                    <p>Mouse movement appears delayed or choppy on screen.</p>
+                    <button class="troubleshoot-btn" onclick="toggleSolution('mouse-lag')">View Solution</button>
+                    <div id="mouse-lag" class="solution-details" style="display:none;">
+                        <h4>Step-by-Step Solution:</h4>
+                        <ol>
+                            <li>Check mouse DPI settings</li>
+                            <li>Update mouse drivers</li>
+                            <li>Test different USB ports</li>
+                            <li>Check for background processes</li>
+                            <li>Restart mouse service</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-high">Hardware</span>
+                    <h3><span class="troubleshoot-icon">🔌</span>Docking Station Issues</h3>
+                    <p>External monitors not working through docking station.</p>
+                    <button class="troubleshoot-btn" onclick="toggleSolution('docking')">View Solution</button>
+                    <div id="docking" class="solution-details" style="display:none;">
+                        <h4>Step-by-Step Solution:</h4>
+                        <ol>
+                            <li>Check docking station power</li>
+                            <li>Reconnect laptop to dock</li>
+                            <li>Update docking station drivers</li>
+                            <li>Test direct laptop connection</li>
+                            <li>Check dock firmware updates</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            const button = event.target;
+            
+            if (solution.style.display === 'none' || solution.style.display === '') {
+                solution.style.display = 'block';
+                button.textContent = 'Hide Solution';
+            } else {
+                solution.style.display = 'none';
+                button.textContent = 'View Solution';
+            }
+        }
+    </script>
+</body>
+</html> 

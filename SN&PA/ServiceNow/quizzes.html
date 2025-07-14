@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiceNow Quizzes - IT Info Center</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/components.css">
+    <link rel="stylesheet" href="../../styles/pages/snow.css">
+</head>
+<body>
+    <header>
+        <h1>ASICS IT Info Center</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../snpa.html">ServiceNow & PowerAutomate</a></li>
+                <li><a href="../../IT-Tasks/it-tasks.html">IT Tasks</a></li>
+                <li><a href="../../Troubleshooting/troubleshooting.html">Troubleshooting</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="page-header">
+            <h2>ServiceNow Quizzes</h2>
+            <p>Test your knowledge of ServiceNow with interactive quizzes covering various topics and scenarios</p>
+        </section>
+
+        <div class="quiz-container">
+            <div class="quiz-section">
+                <h3>ServiceNow Basics Quiz</h3>
+                <div class="quiz-question">
+                    <p><strong>Question 1:</strong> What is an incident in ServiceNow?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-option" onclick="checkAnswer(this, false)">A service request</button>
+                        <button class="quiz-option" onclick="checkAnswer(this, true)">An unplanned interruption to IT service</button>
+                        <button class="quiz-option" onclick="checkAnswer(this, false)">A maintenance schedule</button>
+                    </div>
+                    <div class="quiz-result" id="result-1"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 2:</strong> Which role typically has the most permissions in ServiceNow?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-option" onclick="checkAnswer(this, false)">ITIL User</button>
+                        <button class="quiz-option" onclick="checkAnswer(this, false)">Service Desk</button>
+                        <button class="quiz-option" onclick="checkAnswer(this, true)">System Administrator</button>
+                    </div>
+                    <div class="quiz-result" id="result-2"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 3:</strong> What is the purpose of a change request?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-option" onclick="checkAnswer(this, true)">To implement planned changes to IT infrastructure</button>
+                        <button class="quiz-option" onclick="checkAnswer(this, false)">To report a system outage</button>
+                        <button class="quiz-option" onclick="checkAnswer(this, false)">To request new software installation</button>
+                    </div>
+                    <div class="quiz-result" id="result-3"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 4:</strong> Which field is typically used to categorize incidents?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-option" onclick="checkAnswer(this, false)">Description</button>
+                        <button class="quiz-option" onclick="checkAnswer(this, true)">Category</button>
+                        <button class="quiz-option" onclick="checkAnswer(this, false)">Assigned To</button>
+                    </div>
+                    <div class="quiz-result" id="result-4"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 5:</strong> What does SLA stand for in ServiceNow?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-option" onclick="checkAnswer(this, false)">Service Level Agreement</button>
+                        <button class="quiz-option" onclick="checkAnswer(this, true)">Service Level Agreement</button>
+                        <button class="quiz-option" onclick="checkAnswer(this, false)">System Level Access</button>
+                    </div>
+                    <div class="quiz-result" id="result-5"></div>
+                </div>
+
+                <div class="quiz-summary">
+                    <button class="btn-primary" onclick="showResults()">Show Results</button>
+                    <button class="btn-secondary" onclick="resetQuiz()">Reset Quiz</button>
+                    <div id="quiz-summary-result"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .quiz-section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 2rem;
+        }
+
+        .quiz-question {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background: #f8f9fa;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .quiz-option {
+            padding: 0.75rem 1rem;
+            border: 2px solid #dee2e6;
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s;
+        }
+
+        .quiz-option:hover {
+            border-color: #2563eb;
+            background: #f8f9fa;
+        }
+
+        .quiz-option.correct {
+            border-color: #28a745;
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .quiz-option.incorrect {
+            border-color: #dc3545;
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .quiz-result {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .quiz-result.correct {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .quiz-result.incorrect {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .quiz-summary {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e9ecef;
+            text-align: center;
+        }
+
+        .quiz-summary button {
+            margin: 0 0.5rem;
+        }
+
+        #quiz-summary-result {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+    </style>
+
+    <script>
+        let score = 0;
+        let totalQuestions = 5;
+        let answeredQuestions = 0;
+
+        function checkAnswer(button, isCorrect) {
+            // Prevent multiple answers to same question
+            const questionDiv = button.closest('.quiz-question');
+            const options = questionDiv.querySelectorAll('.quiz-option');
+            const resultDiv = questionDiv.querySelector('.quiz-result');
+            
+            // Disable all options in this question
+            options.forEach(opt => opt.disabled = true);
+            
+            if (isCorrect) {
+                button.classList.add('correct');
+                resultDiv.textContent = '✓ Correct!';
+                resultDiv.classList.add('correct');
+                score++;
+            } else {
+                button.classList.add('incorrect');
+                resultDiv.textContent = '✗ Incorrect. The correct answer is highlighted.';
+                resultDiv.classList.add('incorrect');
+                
+                // Highlight correct answer
+                options.forEach(opt => {
+                    if (opt.onclick.toString().includes('true')) {
+                        opt.classList.add('correct');
+                    }
+                });
+            }
+            
+            answeredQuestions++;
+        }
+
+        function showResults() {
+            const percentage = Math.round((score / totalQuestions) * 100);
+            const summaryDiv = document.getElementById('quiz-summary-result');
+            
+            let message = '';
+            if (percentage >= 80) {
+                message = `🎉 Excellent! You scored ${score}/${totalQuestions} (${percentage}%). Great job!`;
+                summaryDiv.style.background = '#d4edda';
+                summaryDiv.style.color = '#155724';
+            } else if (percentage >= 60) {
+                message = `👍 Good work! You scored ${score}/${totalQuestions} (${percentage}%). Keep studying!`;
+                summaryDiv.style.background = '#fff3cd';
+                summaryDiv.style.color = '#856404';
+            } else {
+                message = `📚 You scored ${score}/${totalQuestions} (${percentage}%). Review the material and try again!`;
+                summaryDiv.style.background = '#f8d7da';
+                summaryDiv.style.color = '#721c24';
+            }
+            
+            summaryDiv.textContent = message;
+        }
+
+        function resetQuiz() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>

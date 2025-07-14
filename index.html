@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT Info Center</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
 </head>
 <body>
     <header>
@@ -12,7 +13,7 @@
         <nav class="navbar">
             <ul>
                 <li><span>Home</span></li>
-                <li><a href="ServiceNow/snow-home.html">ServiceNow & PowerAutomate</a></li>
+                <li><a href="SN&PA/snpa.html">ServiceNow & PowerAutomate</a></li>
                 <li><a href="IT-Tasks/it-tasks.html">IT Tasks</a></li>
                 <li><a href="Troubleshooting/troubleshooting.html">Troubleshooting</a></li>
             </ul>
@@ -22,8 +23,7 @@
         <section class="hero">
             <div class="hero-content">
                 <h2>Welcome to the ASICS IT Info Center</h2>
-                <p class="hero-subtitle">Jimmy Zhu's Intern project
-                    <br><br>As I gain more IT skills and knowledge, I will update this website to showcase my learning.
+                <p class="hero-subtitle">Jimmy Zhu's Intern Project
                 </p>
             </div>
         </section>
@@ -34,7 +34,7 @@
                     <div class="feature-icon">🖥️</div>
                     <h3>ServiceNow</h3>
                     <p>Tutorials, quizzes, and API explorer.</p>
-                    <a href="ServiceNow/snow-home.html" class="btn-primary">Go to ServiceNow</a>
+                    <a href="SN&PA/snpa.html" class="btn-primary">Go to ServiceNow</a>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📝</div>
@@ -51,41 +51,16 @@
             </div>
         </section>
     </main>
-    <!-- Basic Chatbot Widget -->
-    <div id="chatbot-widget" style="position: fixed; bottom: 24px; right: 24px; width: 300px; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); font-family: inherit; z-index: 9999;">
-        <div style="background: #0046be; color: #fff; padding: 10px 16px; border-radius: 10px 10px 0 0; font-weight: 600;">ChatBot</div>
-        <div id="chatbot-messages" style="height: 180px; overflow-y: auto; padding: 10px; font-size: 0.95rem;"></div>
-        <div style="display: flex; border-top: 1px solid #eee;">
-            <input id="chatbot-input" type="text" placeholder="Type a message..." style="flex: 1; border: none; padding: 8px; border-radius: 0 0 0 10px; outline: none; font-size: 1rem;">
-            <button id="chatbot-send" style="background: #0046be; color: #fff; border: none; padding: 8px 16px; border-radius: 0 0 10px 0; cursor: pointer; font-weight: 600;">Send</button>
+    <!-- Chatbot -->
+    <div id="chatbot-widget" class="chatbot-widget">
+        <div class="chatbot-header">ChatBot</div>
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+        <div class="chatbot-input-container">
+            <input id="chatbot-input" type="text" placeholder="Type a message..." class="chatbot-input">
+            <button id="chatbot-send" class="chatbot-send-btn">Send</button>
         </div>
     </div>
-    <script>
-    // Basic Chatbot Logic
-    const messagesDiv = document.getElementById('chatbot-messages');
-    const input = document.getElementById('chatbot-input');
-    const sendBtn = document.getElementById('chatbot-send');
-
-    function appendMessage(sender, text) {
-        const msg = document.createElement('div');
-        msg.style.margin = '6px 0';
-        msg.innerHTML = `<strong>${sender}:</strong> ${text}`;
-        messagesDiv.appendChild(msg);
-        messagesDiv.scrollTop = messagesDiv.scrollHeight;
-    }
-
-    sendBtn.onclick = function() {
-        const userText = input.value.trim();
-        if (!userText) return;
-        appendMessage('You', userText);
-        input.value = '';
-        setTimeout(() => {
-            appendMessage('Bot', 'Hello! How can I help you?');
-        }, 500);
-    };
-    input.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') sendBtn.click();
-    });
-    </script>
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
 </body>
 </html> 

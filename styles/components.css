@@ -1,0 +1,307 @@
+/* Header Component */
+header {
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: var(--spacing-md) var(--spacing-lg);
+  box-shadow: var(--shadow-light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  margin: 0 0 var(--spacing-sm) 0;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: -0.5px;
+}
+
+/* Navigation Component */
+nav {
+  margin-top: var(--spacing-sm);
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Remove bullet points */
+}
+
+nav li {
+  margin: 0;
+  list-style: none; /* Ensure no bullet points */
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-light);
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--white);
+  transition: var(--transition);
+  transform: translateX(-50%);
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+/* Style for the Home span in navigation */
+nav span {
+  color: var(--white);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Button Components */
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: var(--white);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+  background: var(--primary-color);
+  color: var(--white);
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Card Components */
+.feature-card {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  text-align: center;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  display: block;
+}
+
+.feature-card h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+}
+
+/* Hero Component */
+.hero {
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  color: var(--white);
+}
+
+.hero h2::after {
+  display: none;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-lg);
+  opacity: 1;
+  line-height: 1.6;
+  color: var(--white);
+  font-weight: 400;
+}
+
+/* Features Section */
+.features {
+  padding: var(--spacing-xl) var(--spacing-lg);
+  background: var(--white);
+  margin: 0 var(--spacing-lg) var(--spacing-xl) var(--spacing-lg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+/* Page Header Component */
+.page-header {
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.page-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  color: var(--white);
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+}
+
+/* Chatbot Component */
+.chatbot-widget {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 300px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+    font-family: inherit;
+    z-index: 9999;
+}
+
+.chatbot-header {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 10px 16px;
+    border-radius: 10px 10px 0 0;
+    font-weight: 600;
+}
+
+.chatbot-messages {
+    height: 180px;
+    overflow-y: auto;
+    padding: 10px;
+    font-size: 0.95rem;
+}
+
+.chatbot-input-container {
+    display: flex;
+    border-top: 1px solid #eee;
+}
+
+.chatbot-input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    border-radius: 0 0 0 10px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.chatbot-send-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 0 0 10px 0;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.chatbot-send-btn:hover {
+    background: var(--primary-dark);
+} 

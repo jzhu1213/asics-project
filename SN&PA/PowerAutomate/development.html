@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerAutomate Development</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/components.css">
+    <link rel="stylesheet" href="../../styles/pages/powerautomate.css">
+</head>
+<body>
+    <header>
+        <h1>PowerAutomate Development</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../snpa.html">ServiceNow & PowerAutomate</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="development.html">Development</a></li>
+                <li><a href="info.html">Info</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="pa-dev-header">
+            <h2>How to Build Your Own PowerAutomate Script</h2>
+            <p>Step-by-step guide for creating custom automations. Start with a template or follow the instructions below.</p>
+        </section>
+        <div class="pa-dev-steps">
+            <div class="pa-dev-step">
+                <h3>Step 1: Access PowerAutomate</h3>
+                <p>Begin by accessing the PowerAutomate platform through your Microsoft 365 account.</p>
+                <div class="pa-dev-img">🖥️ Screenshot: PowerAutomate home page with "Create" button highlighted</div>
+                <ol>
+                    <li>Go to <a href="https://flow.microsoft.com" target="_blank">flow.microsoft.com</a></li>
+                    <li>Sign in with your ASICS Microsoft 365 credentials</li>
+                    <li>Click "Create" in the left sidebar</li>
+                    <li>Choose "Automated cloud flow" for most scenarios</li>
+                </ol>
+            </div>
+            <div class="pa-dev-step">
+                <h3>Step 2: Choose Your Trigger</h3>
+                <p>Select the event that will start your automation. This is the foundation of your flow.</p>
+                <div class="pa-dev-img">⚡ Screenshot: Trigger selection page showing popular triggers</div>
+                <ul>
+                    <li><strong>Manual triggers:</strong> "Manually trigger a flow" - starts when you click a button</li>
+                    <li><strong>File triggers:</strong> "When a file is created or modified" - responds to file changes</li>
+                    <li><strong>Email triggers:</strong> "When a new email arrives" - processes incoming emails</li>
+                    <li><strong>Scheduled triggers:</strong> "Recurrence" - runs at set intervals</li>
+                    <li><strong>Form triggers:</strong> "When a new response is submitted" - processes form submissions</li>
+                </ul>
+            </div>
+            <div class="pa-dev-step">
+                <h3>Step 3: Add Actions</h3>
+                <p>Build your automation by adding actions that perform specific tasks after the trigger occurs.</p>
+                <div class="pa-dev-img">🔧 Screenshot: Action selection with popular actions like "Send an email"</div>
+                <ol>
+                    <li>Click the "+" button after your trigger</li>
+                    <li>Search for the action you need (e.g., "Send an email")</li>
+                    <li>Configure the action parameters</li>
+                    <li>Add more actions as needed</li>
+                    <li>Use "Apply to each" for processing multiple items</li>
+                </ol>
+            </div>
+            <div class="pa-dev-step">
+                <h3>Step 4: Add Conditions and Logic</h3>
+                <p>Make your flow intelligent by adding conditional logic and decision points.</p>
+                <div class="pa-dev-img">🧠 Screenshot: Condition builder with if/then/else logic</div>
+                <ul>
+                    <li><strong>Conditions:</strong> Add "Condition" action to create if/then logic</li>
+                    <li><strong>Switch statements:</strong> Use "Switch" for multiple possible outcomes</li>
+                    <li><strong>Variables:</strong> Store and manipulate data with "Initialize variable"</li>
+                    <li><strong>Expressions:</strong> Use formulas to calculate values or format text</li>
+                </ul>
+            </div>
+            <div class="pa-dev-step">
+                <h3>Step 5: Test Your Flow</h3>
+                <p>Thoroughly test your automation to ensure it works correctly before deploying.</p>
+                <div class="pa-dev-img">✅ Screenshot: Flow testing interface with run history</div>
+                <ol>
+                    <li>Click "Test" in the top right corner</li>
+                    <li>Choose "Manually" to test immediately</li>
+                    <li>Provide test data if prompted</li>
+                    <li>Review the execution results</li>
+                    <li>Check each step for errors or unexpected behavior</li>
+                    <li>Fix any issues and retest</li>
+                </ol>
+            </div>
+            <div class="pa-dev-step">
+                <h3>Step 6: Deploy and Monitor</h3>
+                <p>Deploy your flow and set up monitoring to track its performance and catch issues.</p>
+                <div class="pa-dev-img">📊 Screenshot: Flow analytics dashboard showing run statistics</div>
+                <ul>
+                    <li><strong>Save and activate:</strong> Click "Save" then "Turn on" to deploy</li>
+                    <li><strong>Set up notifications:</strong> Configure error alerts for failed runs</li>
+                    <li><strong>Monitor performance:</strong> Check the "Analytics" tab regularly</li>
+                    <li><strong>Document your flow:</strong> Add descriptions and comments for future reference</li>
+                </ul>
+            </div>
+        </div>
+        <section class="pa-templates">
+            <h3>Starter Templates</h3>
+            <div class="pa-template-card">
+                <h4>📧 Email Notification Template</h4>
+                <p>Trigger: When a file is modified in SharePoint<br>
+                Actions: Send email notification with file details<br>
+                <strong>Use case:</strong> Notify team when important documents are updated</p>
+                <button class="pa-download">Download Template</button>
+            </div>
+            <div class="pa-template-card">
+                <h4>📊 Data Sync Template</h4>
+                <p>Trigger: Scheduled (daily at 6 AM)<br>
+                Actions: Copy data from one system to another<br>
+                <strong>Use case:</strong> Sync data between ServiceNow and Excel</p>
+                <button class="pa-download">Download Template</button>
+            </div>
+            <div class="pa-template-card">
+                <h4>✅ Approval Workflow Template</h4>
+                <p>Trigger: When form is submitted<br>
+                Actions: Send approval request, wait for response, process result<br>
+                <strong>Use case:</strong> IT equipment request approvals</p>
+                <button class="pa-download">Download Template</button>
+            </div>
+        </section>
+        <section class="pa-faq">
+            <h3>Frequently Asked Questions</h3>
+            <div class="pa-faq-item">
+                <strong>Q: How many actions can I add to a single flow?</strong>
+                <p>A: PowerAutomate allows up to 300 actions per flow. For complex automations, consider breaking them into multiple flows that work together.</p>
+            </div>
+            <div class="pa-faq-item">
+                <strong>Q: Can I use PowerAutomate with external systems?</strong>
+                <p>A: Yes! PowerAutomate supports 400+ connectors including Salesforce, Slack, Google Workspace, and custom HTTP requests for any web API.</p>
+            </div>
+            <div class="pa-faq-item">
+                <strong>Q: How do I handle errors in my flows?</strong>
+                <p>A: Use the "Configure run after" settings to add error handling. You can also add "Scope" actions to group related steps and handle failures gracefully.</p>
+            </div>
+            <div class="pa-faq-item">
+                <strong>Q: What's the difference between a flow and a solution?</strong>
+                <p>A: A flow is a single automation. A solution is a container that can hold multiple flows, custom connectors, and other components for easy deployment and management.</p>
+            </div>
+            <div class="pa-faq-item">
+                <strong>Q: How can I share my flows with other team members?</strong>
+                <p>A: You can share flows by adding team members as owners, or export/import flows as solutions. For organization-wide deployment, use Power Platform admin center.</p>
+            </div>
+            <div class="pa-faq-item">
+                <strong>Q: What are the best practices for naming flows?</strong>
+                <p>A: Use descriptive names like "Email Notification - New ServiceNow Tickets" or "Daily Backup - Finance Documents". Include the trigger and main action in the name.</p>
+            </div>
+        </section>
+    </main>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/powerautomate.js"></script>
+</body>
+</html>

@@ -3,44 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imaging</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>PC Imaging & Database Setup</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components.css">
 </head>
 <body>
     <header>
-        <h1>PC Reimaging and Database Setup</h1>
+        <h1>PC Imaging & Database Setup</h1>
         <nav class="navbar">
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="../ServiceNow/snow-home.html">ServiceNow</a></li>
+                <li><a href="../SN&PA/snpa.html">ServiceNow</a></li>
                 <li><a href="it-tasks.html">IT Tasks</a></li>
                 <li><a href="../Troubleshooting/troubleshooting.html">Troubleshooting</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="imaging-section" style="display: flex; align-items: flex-start; gap: 2rem;">
-            <div style="flex: 1;">
-                <h2>Already Imaged</h2>
-                <p><b>Steps:</b>
-                    <ol>
-                        <li>Press the F12 key during the loading screen to open the <b>Boot Menu</b></li>
-                        <li>Install the <b>ASICS Image</b> onto the computer</li>
-                        <li>Login and complete all <b>Microsoft, TeamViewer, Chrome, and MS Teams</b> updates</li>
-                    </ol>
-                </p>
+        <section class="page-header">
+            <h2>PC Imaging & Database Setup</h2>
+            <p>Complete guide for reimaging PCs and setting up databases for ASICS Boston operations</p>
+        </section>
+
+        <div class="troubleshoot-container">
+            <div class="troubleshoot-grid">
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-high">Standard</span>
+                    <h3><span class="troubleshoot-icon">💻</span>New PC Imaging</h3>
+                    <p>Complete imaging process for new computers from scratch.</p>
+                    <a href="#new-pc" class="troubleshoot-btn">View Procedure</a>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-medium">Refresh</span>
+                    <h3><span class="troubleshoot-icon">🔄</span>PC Refresh</h3>
+                    <p>Reimaging existing computers while preserving data when needed.</p>
+                    <a href="#refresh-pc" class="troubleshoot-btn">View Procedure</a>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-high">Database</span>
+                    <h3><span class="troubleshoot-icon">🗄️</span>Database Setup</h3>
+                    <p>Installing and configuring databases on existing machines.</p>
+                    <a href="#database-setup" class="troubleshoot-btn">View Procedure</a>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-low">Troubleshooting</span>
+                    <h3><span class="troubleshoot-icon">🔧</span>Common Issues</h3>
+                    <p>Solutions for common imaging and database setup problems.</p>
+                    <a href="#troubleshooting" class="troubleshoot-btn">View Solutions</a>
+                </div>
             </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 8px; width: 360px; height: 360px;">
-                <img src="../images/imaging-chrome.png" alt="Monitor Power" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                <img src="../images/imaging-lenovo.png" alt="Monitor DP" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                <img src="../images/imaging-teamviewer.png" alt="Monitor HDMI" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                <img src="../images/imaging-msteams.png" alt="Print Step 1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+
+        <!-- New PC Imaging Procedure -->
+        <section id="new-pc" class="procedure-section">
+            <h3>New PC Imaging Procedure</h3>
+            <div class="procedure-steps">
+                <h4>Pre-Imaging Checklist</h4>
+                <ul>
+                    <li>Verify PC hardware specifications meet requirements</li>
+                    <li>Ensure all necessary cables and peripherals are available</li>
+                    <li>Check network connectivity in imaging location</li>
+                    <li>Prepare ASICS image USB drive or network boot</li>
+                </ul>
+
+                <h4>Step-by-Step Imaging Process</h4>
+                <ol>
+                    <li><strong>Boot from ASICS Image:</strong>
+                        <ul>
+                            <li>Insert ASICS image USB drive or connect to network boot</li>
+                            <li>Press F12 during startup to access Boot Menu</li>
+                            <li>Select USB drive or network boot option</li>
+                            <li>Wait for imaging environment to load</li>
+                        </ul>
+                    </li>
+                    <li><strong>Select Imaging Options:</strong>
+                        <ul>
+                            <li>Choose "Standard ASICS Image" from menu</li>
+                            <li>Select target drive (usually C:)</li>
+                            <li>Confirm "Clean Install" option</li>
+                            <li>Begin imaging process</li>
+                        </ul>
+                    </li>
+                    <li><strong>Monitor Progress:</strong>
+                        <ul>
+                            <li>Imaging typically takes 20-30 minutes</li>
+                            <li>Do not interrupt power or remove USB drive</li>
+                            <li>Wait for completion message</li>
+                        </ul>
+                    </li>
+                    <li><strong>Post-Imaging Setup:</strong>
+                        <ul>
+                            <li>Remove USB drive when prompted</li>
+                            <li>Allow system to restart automatically</li>
+                            <li>Complete Windows initial setup</li>
+                            <li>Log in with temporary credentials</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h4>Required Software Updates</h4>
+                <ol>
+                    <li><strong>Windows Updates:</strong>
+                        <ul>
+                            <li>Run Windows Update multiple times until no updates remain</li>
+                            <li>Restart computer after each major update</li>
+                            <li>Verify Windows version is current</li>
+                        </ul>
+                    </li>
+                    <li><strong>Application Updates:</strong>
+                        <ul>
+                            <li>Update Microsoft Teams to latest version</li>
+                            <li>Update Google Chrome browser</li>
+                            <li>Update TeamViewer if installed</li>
+                            <li>Verify all ASICS applications are current</li>
+                        </ul>
+                    </li>
+                </ol>
             </div>
         </section>
-        <section class="imaging-section">
-            <h2>From Scratch</h2>
-            <p>Instructions for imaging a PC from scratch will go here.</p>
+
+        <!-- PC Refresh Procedure -->
+        <section id="refresh-pc" class="procedure-section">
+            <h3>PC Refresh Procedure</h3>
+            <div class="procedure-steps">
+                <h4>Data Backup (If Required)</h4>
+                <ol>
+                    <li>Identify critical user data to preserve</li>
+                    <li>Backup to network drive or external storage</li>
+                    <li>Document user preferences and settings</li>
+                    <li>Verify backup integrity before proceeding</li>
+                </ol>
+
+                <h4>Refresh Process</h4>
+                <ol>
+                    <li>Follow same boot and imaging steps as new PC</li>
+                    <li>Choose "Refresh" option instead of "Clean Install" if available</li>
+                    <li>Restore backed up data after imaging</li>
+                    <li>Reconfigure user-specific settings</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Database Setup -->
+        <section id="database-setup" class="procedure-section">
+            <h3>Database Setup on Existing Machines</h3>
+            <div class="procedure-steps">
+                <h4>Prerequisites</h4>
+                <ul>
+                    <li>Verify machine meets database requirements</li>
+                    <li>Ensure adequate storage space (minimum 50GB free)</li>
+                    <li>Check network connectivity to database server</li>
+                    <li>Obtain database credentials and connection strings</li>
+                </ul>
+
+                <h4>Database Installation Steps</h4>
+                <ol>
+                    <li><strong>Install Database Client:</strong>
+                        <ul>
+                            <li>Download appropriate database client software</li>
+                            <li>Run installer with administrative privileges</li>
+                            <li>Configure connection settings</li>
+                            <li>Test connection to database server</li>
+                        </ul>
+                    </li>
+                    <li><strong>Configure Applications:</strong>
+                        <ul>
+                            <li>Update application configuration files</li>
+                            <li>Set database connection parameters</li>
+                            <li>Test application database connectivity</li>
+                            <li>Verify data access permissions</li>
+                        </ul>
+                    </li>
+                    <li><strong>Security Setup:</strong>
+                        <ul>
+                            <li>Configure database encryption if required</li>
+                            <li>Set up user authentication</li>
+                            <li>Test backup and recovery procedures</li>
+                            <li>Document connection details securely</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Troubleshooting -->
+        <section id="troubleshooting" class="procedure-section">
+            <h3>Common Issues & Solutions</h3>
+            <div class="procedure-steps">
+                <h4>Imaging Problems</h4>
+                <ul>
+                    <li><strong>Boot Menu Not Appearing:</strong> Try different function keys (F2, F8, F10, F12)</li>
+                    <li><strong>USB Not Detected:</strong> Try different USB port or recreate bootable drive</li>
+                    <li><strong>Imaging Fails:</strong> Check hard drive health and try different imaging method</li>
+                    <li><strong>Slow Imaging:</strong> Verify USB drive speed and try USB 3.0 port</li>
+                </ul>
+
+                <h4>Post-Imaging Issues</h4>
+                <ul>
+                    <li><strong>Windows Won't Boot:</strong> Check boot order in BIOS settings</li>
+                    <li><strong>Missing Drivers:</strong> Install manufacturer drivers from support website</li>
+                    <li><strong>Network Issues:</strong> Update network adapter drivers</li>
+                    <li><strong>Application Errors:</strong> Reinstall problematic applications</li>
+                </ul>
+
+                <h4>Database Connection Issues</h4>
+                <ul>
+                    <li><strong>Connection Timeout:</strong> Check network connectivity and firewall settings</li>
+                    <li><strong>Authentication Failed:</strong> Verify credentials and user permissions</li>
+                    <li><strong>Slow Performance:</strong> Check network bandwidth and database server load</li>
+                    <li><strong>Data Corruption:</strong> Run database integrity checks and restore from backup</li>
+                </ul>
+            </div>
         </section>
     </main>
+    
+    <style>
+        .procedure-section {
+            margin: 2rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .procedure-steps {
+            margin-top: 1rem;
+        }
+        
+        .procedure-steps h4 {
+            color: #2563eb;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+        
+        .procedure-steps ol, .procedure-steps ul {
+            margin-left: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .procedure-steps li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .procedure-steps strong {
+            color: #1e3a8a;
+        }
+    </style>
 </body>
 </html>

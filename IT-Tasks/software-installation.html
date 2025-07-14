@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Installation - IT Info Center</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components.css">
+</head>
+<body>
+    <header>
+        <h1>ASICS IT Info Center</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../SN&PA/snpa.html">ServiceNow & PowerAutomate</a></li>
+                <li><a href="it-tasks.html">IT Tasks</a></li>
+                <li><a href="../Troubleshooting/troubleshooting.html">Troubleshooting</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="page-header">
+            <h2>Software Installation</h2>
+            <p>Standard procedures for installing and configuring software across ASICS systems</p>
+        </section>
+        
+        <div class="troubleshoot-container">
+            <div class="troubleshoot-grid">
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-high">Standard</span>
+                    <h3><span class="troubleshoot-icon">💼</span>Office Applications</h3>
+                    <p>Microsoft Office 365, Adobe Creative Suite, and other productivity software.</p>
+                    <a href="#office-install" class="troubleshoot-btn">View Procedure</a>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-medium">Security</span>
+                    <h3><span class="troubleshoot-icon">🛡️</span>Security Software</h3>
+                    <p>Antivirus, VPN clients, and security tools installation procedures.</p>
+                    <a href="#security-install" class="troubleshoot-btn">View Procedure</a>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-low">Specialized</span>
+                    <h3><span class="troubleshoot-icon">🔧</span>Department Software</h3>
+                    <p>Department-specific applications and tools for different teams.</p>
+                    <a href="#dept-install" class="troubleshoot-btn">View Procedure</a>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-high">Updates</span>
+                    <h3><span class="troubleshoot-icon">🔄</span>Software Updates</h3>
+                    <p>Procedures for updating existing software and managing patches.</p>
+                    <a href="#updates" class="troubleshoot-btn">View Procedure</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Detailed Procedures -->
+        <section id="office-install" class="procedure-section">
+            <h3>Office Applications Installation</h3>
+            <div class="procedure-steps">
+                <h4>Microsoft Office 365</h4>
+                <ol>
+                    <li>Verify user has valid Office 365 license</li>
+                    <li>Download Office 365 installer from Microsoft portal</li>
+                    <li>Run installer as administrator</li>
+                    <li>Choose "Install for this user only" option</li>
+                    <li>Wait for installation to complete (15-20 minutes)</li>
+                    <li>Sign in with user's ASICS email credentials</li>
+                    <li>Verify all applications launch correctly</li>
+                </ol>
+                
+                <h4>Adobe Creative Suite</h4>
+                <ol>
+                    <li>Check Adobe license availability</li>
+                    <li>Download Creative Cloud installer</li>
+                    <li>Install Creative Cloud application</li>
+                    <li>Sign in with Adobe account</li>
+                    <li>Install required applications (Photoshop, Illustrator, etc.)</li>
+                    <li>Configure workspace settings</li>
+                </ol>
+            </div>
+        </section>
+        
+        <section id="security-install" class="procedure-section">
+            <h3>Security Software Installation</h3>
+            <div class="procedure-steps">
+                <h4>Antivirus Software</h4>
+                <ol>
+                    <li>Uninstall any existing antivirus software</li>
+                    <li>Download approved antivirus installer</li>
+                    <li>Run installer with administrative privileges</li>
+                    <li>Configure real-time protection settings</li>
+                    <li>Schedule regular scan times</li>
+                    <li>Update virus definitions</li>
+                </ol>
+                
+                <h4>VPN Client Setup</h4>
+                <ol>
+                    <li>Download VPN client software</li>
+                    <li>Install with default settings</li>
+                    <li>Configure connection settings</li>
+                    <li>Test connection to ASICS network</li>
+                    <li>Set up automatic connection rules</li>
+                </ol>
+            </div>
+        </section>
+        
+        <section id="dept-install" class="procedure-section">
+            <h3>Department-Specific Software</h3>
+            <div class="procedure-steps">
+                <h4>Finance Department</h4>
+                <ul>
+                    <li>QuickBooks Enterprise</li>
+                    <li>SAP Business One</li>
+                    <li>Excel add-ins for financial modeling</li>
+                </ul>
+                
+                <h4>Marketing Department</h4>
+                <ul>
+                    <li>Canva Pro</li>
+                    <li>Mailchimp</li>
+                    <li>Social media management tools</li>
+                </ul>
+                
+                <h4>IT Department</h4>
+                <ul>
+                    <li>Remote desktop tools</li>
+                    <li>Network monitoring software</li>
+                    <li>System administration utilities</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="updates" class="procedure-section">
+            <h3>Software Update Procedures</h3>
+            <div class="procedure-steps">
+                <h4>Automatic Updates</h4>
+                <ol>
+                    <li>Configure Windows Update settings</li>
+                    <li>Set update schedule (non-business hours)</li>
+                    <li>Enable automatic restart policies</li>
+                    <li>Monitor update success rates</li>
+                </ol>
+                
+                <h4>Manual Updates</h4>
+                <ol>
+                    <li>Check for available updates</li>
+                    <li>Review update notes and compatibility</li>
+                    <li>Backup important data</li>
+                    <li>Install updates during maintenance window</li>
+                    <li>Test functionality after update</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+    
+    <style>
+        .procedure-section {
+            margin: 2rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .procedure-steps {
+            margin-top: 1rem;
+        }
+        
+        .procedure-steps h4 {
+            color: #2563eb;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+        
+        .procedure-steps ol, .procedure-steps ul {
+            margin-left: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .procedure-steps li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</body>
+</html> 

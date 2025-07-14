@@ -3,34 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitor Stations</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Monitor Stations - IT Info Center</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/pages/troubleshooting.css">
 </head>
 <body>
     <header>
         <div style="display: flex; justify-content: space-between; align-items: center;">
-            <h1>Monitor Stations</h1>
+            <h1>Monitor Stations Setup & Troubleshooting</h1>
             <a href="troubleshooting.html" class="btn-secondary" style="text-decoration: none; padding: 0.5rem 1rem; font-size: 0.9rem;">← Back to Troubleshooting</a>
         </div>
     </header>
     <main>
-        <section id="windows">
-            <h2>Common Monitor Station Issues and Solutions</h2>
-
-            <div class="instruction-step" style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
-                <div style="flex: 1;">
-                    <p><strong>If nothing is displayed on the monitor, check the following:</strong>
+        <section class="troubleshoot-header">
+            <h2>Monitor Stations Guide</h2>
+            <p>Complete guide for setting up and troubleshooting monitor configurations, from single displays to multi-monitor setups</p>
+        </section>
+        
+        <div class="troubleshoot-container">
+            <div class="troubleshoot-grid">
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-high">Setup</span>
+                    <h3><span class="troubleshoot-icon">🖥️</span>Single Monitor Setup</h3>
+                    <p>Basic setup for one external monitor connected to laptop or desktop.</p>
+                    <button class="troubleshoot-btn" onclick="toggleSolution('single-monitor')">View Guide</button>
+                    <div id="single-monitor" class="solution-details" style="display:none;">
+                        <h4>Step-by-Step Setup:</h4>
+                        <ol>
+                            <li>Power off your computer and monitor</li>
+                            <li>Connect HDMI or DisplayPort cable to monitor</li>
+                            <li>Connect other end to laptop/desktop port</li>
+                            <li>Power on monitor first, then computer</li>
+                            <li>Windows should automatically detect the monitor</li>
+                            <li>If not detected, press Windows + P to open display settings</li>
+                        </ol>
+                        <h4>Common Issues:</h4>
                         <ul>
-                            <li><b>HDMI</b> cable (pictured on the left) is connected to the monitor and docking station</li>
-                            <li><b>DP</b> cable (pictured on the right) is connected to the monitor and docking station</li>
-                            <li>For each monitor, you will have one of these and a power cable.</li>
-                        </ul>  
-                    </p>
+                            <li><strong>No Signal:</strong> Check cable connections and try different ports</li>
+                            <li><strong>Wrong Resolution:</strong> Right-click desktop → Display Settings → Adjust resolution</li>
+                            <li><strong>Monitor Not Detected:</strong> Update graphics drivers</li>
+                        </ul>
+                    </div>
                 </div>
-                <img src="../images/monitor-dock.png" width="250" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-medium">Setup</span>
+                    <h3><span class="troubleshoot-icon">🖥️🖥️</span>Dual Monitor Setup</h3>
+                    <p>Setting up two monitors for extended desktop or mirrored display.</p>
+                    <button class="troubleshoot-btn" onclick="toggleSolution('dual-monitor')">View Guide</button>
+                    <div id="dual-monitor" class="solution-details" style="display:none;">
+                        <h4>Step-by-Step Setup:</h4>
+                        <ol>
+                            <li>Connect both monitors using available ports (HDMI, DP, VGA)</li>
+                            <li>Power on all devices</li>
+                            <li>Press Windows + P to open display options</li>
+                            <li>Choose "Extend" for dual desktop or "Duplicate" for mirroring</li>
+                            <li>Arrange monitors in Display Settings to match physical layout</li>
+                            <li>Set primary monitor if needed</li>
+                        </ol>
+                        <h4>Port Priority (Best to Worst):</h4>
+                        <ol>
+                            <li>DisplayPort (best quality, highest refresh rates)</li>
+                            <li>HDMI (good quality, widely supported)</li>
+                            <li>VGA (analog, lowest quality)</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-high">Hardware</span>
+                    <h3><span class="troubleshoot-icon">🔌</span>Docking Station Setup</h3>
+                    <p>Using docking stations for laptop users with multiple monitors and peripherals.</p>
+                    <button class="troubleshoot-btn" onclick="toggleSolution('docking-station')">View Guide</button>
+                    <div id="docking-station" class="solution-details" style="display:none;">
+                        <h4>Step-by-Step Setup:</h4>
+                        <ol>
+                            <li>Connect docking station to power supply</li>
+                            <li>Connect monitors to docking station ports</li>
+                            <li>Connect keyboard, mouse, and other peripherals</li>
+                            <li>Connect laptop to docking station</li>
+                            <li>Install docking station drivers if prompted</li>
+                            <li>Configure display settings in Windows</li>
+                        </ol>
+                        <h4>Troubleshooting:</h4>
+                        <ul>
+                            <li><strong>Dock Not Recognized:</strong> Update docking station firmware</li>
+                            <li><strong>Monitors Not Working:</strong> Check dock power and connections</li>
+                            <li><strong>Performance Issues:</strong> Ensure dock supports your laptop's specifications</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-medium">Software</span>
+                    <h3><span class="troubleshoot-icon">⚙️</span>Display Settings</h3>
+                    <p>Configuring resolution, refresh rate, and display arrangement in Windows.</p>
+                    <button class="troubleshoot-btn" onclick="toggleSolution('display-settings')">View Guide</button>
+                    <div id="display-settings" class="solution-details" style="display:none;">
+                        <h4>Accessing Display Settings:</h4>
+                        <ol>
+                            <li>Right-click on desktop → Display Settings</li>
+                            <li>Or: Windows + I → System → Display</li>
+                            <li>Or: Windows + P for quick display options</li>
+                        </ol>
+                        <h4>Key Settings:</h4>
+                        <ul>
+                            <li><strong>Resolution:</strong> Choose recommended resolution for best quality</li>
+                            <li><strong>Refresh Rate:</strong> Higher rates (60Hz+) for smoother motion</li>
+                            <li><strong>Scaling:</strong> Adjust text and app size (100%, 125%, 150%)</li>
+                            <li><strong>Orientation:</strong> Portrait or landscape mode</li>
+                            <li><strong>Multiple Displays:</strong> Extend, duplicate, or show on one display</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-low">Troubleshooting</span>
+                    <h3><span class="troubleshoot-icon">🔧</span>Common Problems</h3>
+                    <p>Solutions for frequent monitor and display issues.</p>
+                    <button class="troubleshoot-btn" onclick="toggleSolution('common-problems')">View Solutions</button>
+                    <div id="common-problems" class="solution-details" style="display:none;">
+                        <h4>Problem: Monitor Shows "No Signal"</h4>
+                        <ul>
+                            <li>Check cable connections at both ends</li>
+                            <li>Try different cables or ports</li>
+                            <li>Restart computer and monitor</li>
+                            <li>Check monitor input source settings</li>
+                            <li>Update graphics drivers</li>
+                        </ul>
+                        
+                        <h4>Problem: Wrong Resolution or Blurry Display</h4>
+                        <ul>
+                            <li>Right-click desktop → Display Settings</li>
+                            <li>Select correct monitor</li>
+                            <li>Choose recommended resolution</li>
+                            <li>Check scaling settings</li>
+                            <li>Update graphics drivers</li>
+                        </ul>
+                        
+                        <h4>Problem: Monitor Flickering or Artifacts</h4>
+                        <ul>
+                            <li>Check cable quality and connections</li>
+                            <li>Update graphics drivers</li>
+                            <li>Test with different refresh rate</li>
+                            <li>Check for electromagnetic interference</li>
+                            <li>Try different monitor if available</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-low">Advanced</span>
+                    <h3><span class="troubleshoot-icon">🎮</span>Gaming & High Refresh</h3>
+                    <p>Optimizing monitors for gaming, video editing, or high-performance applications.</p>
+                    <button class="troubleshoot-btn" onclick="toggleSolution('gaming-setup')">View Guide</button>
+                    <div id="gaming-setup" class="solution-details" style="display:none;">
+                        <h4>High Refresh Rate Setup:</h4>
+                        <ol>
+                            <li>Ensure monitor supports desired refresh rate (120Hz, 144Hz, etc.)</li>
+                            <li>Use DisplayPort or HDMI 2.0+ cable</li>
+                            <li>Set refresh rate in Display Settings → Advanced Display Settings</li>
+                            <li>Enable G-Sync/FreeSync if supported</li>
+                            <li>Update graphics drivers to latest version</li>
+                        </ol>
+                        <h4>Color Calibration:</h4>
+                        <ul>
+                            <li>Use Windows Color Calibration tool</li>
+                            <li>Adjust brightness, contrast, and color temperature</li>
+                            <li>Consider professional calibration for design work</li>
+                            <li>Enable HDR if monitor supports it</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-        </section>  
+        </div>
+        
+        <!-- Additional Information Section -->
+        <section class="additional-info">
+            <h3>Monitor Specifications Reference</h3>
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <h4>Resolution Standards</h4>
+                    <ul>
+                        <li><strong>1920x1080 (Full HD):</strong> Standard for most office work</li>
+                        <li><strong>2560x1440 (2K):</strong> Better for design and development</li>
+                        <li><strong>3840x2160 (4K):</strong> High-end for video editing and gaming</li>
+                        <li><strong>3440x1440 (Ultrawide):</strong> Wide format for productivity</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h4>Connection Types</h4>
+                    <ul>
+                        <li><strong>DisplayPort:</strong> Best quality, supports high refresh rates</li>
+                        <li><strong>HDMI:</strong> Good quality, widely compatible</li>
+                        <li><strong>USB-C/Thunderbolt:</strong> Modern laptops, supports power delivery</li>
+                        <li><strong>VGA:</strong> Legacy analog connection, lowest quality</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h4>Refresh Rates</h4>
+                    <ul>
+                        <li><strong>60Hz:</strong> Standard for office work</li>
+                        <li><strong>120Hz:</strong> Smooth for gaming and video</li>
+                        <li><strong>144Hz+:</strong> Professional gaming and VR</li>
+                        <li><strong>Variable:</strong> G-Sync/FreeSync for adaptive refresh</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
+    
+    <style>
+        .additional-info {
+            margin: 2rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .spec-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+        }
+        
+        .spec-card h4 {
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+        
+        .spec-card ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+        
+        .spec-card li {
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            const button = event.target;
+            
+            if (solution.style.display === 'none' || solution.style.display === '') {
+                solution.style.display = 'block';
+                button.textContent = 'Hide Guide';
+            } else {
+                solution.style.display = 'none';
+                button.textContent = 'View Guide';
+            }
+        }
+    </script>
 </body>
 </html>

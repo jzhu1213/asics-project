@@ -1,0 +1,139 @@
+/* ServiceNow Page Styles */
+.snow-header {
+    background: var(--gradient-snow);
+    color: white;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.snow-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+}
+
+.snow-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.snow-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.snow-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.snow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.snow-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2.5rem 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.snow-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #1e40af);
+}
+
+.snow-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(59, 130, 246, 0.2);
+}
+
+.snow-card h3 {
+    color: #1e3a8a;
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.snow-card p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.snow-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #3b82f6, #1e40af);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.snow-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+}
+
+.snow-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+    display: block;
+}
+
+.coming-soon {
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    border: 2px dashed #cbd5e1;
+    color: #64748b;
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    border-radius: 16px;
+    margin-top: var(--spacing-lg);
+}
+
+.coming-soon h2 {
+    color: #475569;
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+@media (max-width: 768px) {
+    .snow-header h2 {
+        font-size: 2.2rem;
+    }
+    .snow-grid {
+        grid-template-columns: 1fr;
+    }
+} 
