@@ -6,7 +6,7 @@ this project! More to come...
 
 ## Features
 
-ServiceNow Training
+ServiceNow and PowerAutomate Introduction
 
 IT Tasks Overview
 
