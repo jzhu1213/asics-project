@@ -53,6 +53,9 @@
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
 }
 
 .troubleshoot-card::before {

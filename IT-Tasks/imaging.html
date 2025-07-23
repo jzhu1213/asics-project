@@ -6,6 +6,7 @@
     <title>PC Imaging & Database Setup</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/pages/troubleshooting.css">
 </head>
 <body>
     <header>
@@ -16,44 +17,20 @@
     </header>
     <main>
         <section class="page-header">
-            <h2>PC Imaging & Database Setup</h2>
+            <h2>PC Imaging & OS Updates</h2>
             <p>Complete guide for reimaging PCs and setting up databases for ASICS Boston operations</p>
         </section>
 
-        <div class="troubleshoot-container">
-            <div class="troubleshoot-grid">
-                <div class="troubleshoot-card">
-                    <span class="priority-indicator priority-high">Standard</span>
-                    <h3><span class="troubleshoot-icon">💻</span>New PC Imaging</h3>
-                    <p>Complete imaging process for new computers from scratch.</p>
-                    <a href="#new-pc" class="troubleshoot-btn">View Procedure</a>
-                </div>
-                
-                <div class="troubleshoot-card">
-                    <span class="priority-indicator priority-medium">Refresh</span>
-                    <h3><span class="troubleshoot-icon">🔄</span>PC Refresh</h3>
-                    <p>Reimaging existing computers while preserving data when needed.</p>
-                    <a href="#refresh-pc" class="troubleshoot-btn">View Procedure</a>
-                </div>
-                
-                <div class="troubleshoot-card">
-                    <span class="priority-indicator priority-high">Database</span>
-                    <h3><span class="troubleshoot-icon">🗄️</span>Database Setup</h3>
-                    <p>Installing and configuring databases on existing machines.</p>
-                    <a href="#database-setup" class="troubleshoot-btn">View Procedure</a>
-                </div>
-                
-                <div class="troubleshoot-card">
-                    <span class="priority-indicator priority-low">Troubleshooting</span>
-                    <h3><span class="troubleshoot-icon">🔧</span>Common Issues</h3>
-                    <p>Solutions for common imaging and database setup problems.</p>
-                    <a href="#troubleshooting" class="troubleshoot-btn">View Solutions</a>
-                </div>
+        <div class="tab-container">
+            <div class="tab-bar">
+                <button class="tab-btn active" onclick="showTab(event, 'new-pc')">New PC Imaging</button>
+                <button class="tab-btn" onclick="showTab(event, 'refresh-pc')">PC Refresh</button>
+                <button class="tab-btn" onclick="showTab(event, 'database-setup')">Database Setup</button>
+                <button class="tab-btn" onclick="showTab(event, 'troubleshooting')">Troubleshooting</button>
             </div>
         </div>
 
-        <!-- New PC Imaging Procedure -->
-        <section id="new-pc" class="procedure-section">
+        <section id="new-pc" class="procedure-section tab-content" style="display: block;">
             <h3>New PC Imaging Procedure</h3>
             <div class="procedure-steps">
                 <h4>Pre-Imaging Checklist</h4>
@@ -120,8 +97,7 @@
             </div>
         </section>
 
-        <!-- PC Refresh Procedure -->
-        <section id="refresh-pc" class="procedure-section">
+        <section id="refresh-pc" class="procedure-section tab-content" style="display: none;">
             <h3>PC Refresh Procedure</h3>
             <div class="procedure-steps">
                 <h4>Data Backup (If Required)</h4>
@@ -142,8 +118,7 @@
             </div>
         </section>
 
-        <!-- Database Setup -->
-        <section id="database-setup" class="procedure-section">
+        <section id="database-setup" class="procedure-section tab-content" style="display: none;">
             <h3>Database Setup on Existing Machines</h3>
             <div class="procedure-steps">
                 <h4>Prerequisites</h4>
@@ -184,8 +159,7 @@
             </div>
         </section>
 
-        <!-- Troubleshooting -->
-        <section id="troubleshooting" class="procedure-section">
+        <section id="troubleshooting" class="procedure-section tab-content" style="display: none;">
             <h3>Common Issues & Solutions</h3>
             <div class="procedure-steps">
                 <h4>Imaging Problems</h4>
@@ -245,6 +219,49 @@
         .procedure-steps strong {
             color: #1e3a8a;
         }
+        .tab-bar {
+            display: flex;
+            gap: 0.5rem;
+            margin: 2rem 2rem 0 2rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        .tab-btn {
+            background: none;
+            border: none;
+            outline: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2563eb;
+            padding: 1rem 2rem 0.7rem 2rem;
+            cursor: pointer;
+            border-radius: 8px 8px 0 0;
+            transition: background 0.2s;
+        }
+        .tab-btn.active, .tab-btn:hover {
+            background: #e0e7ff;
+            color: #1e3a8a;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content[style*='display: block'] {
+            display: block;
+        }
     </style>
+    <script>
+        function showTab(evt, tabId) {
+            document.querySelectorAll('.tab-content').forEach(function(tab) {
+                tab.style.display = 'none';
+            });
+            document.querySelectorAll('.tab-btn').forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            document.getElementById(tabId).style.display = 'block';
+            evt.currentTarget.classList.add('active');
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            showTab({currentTarget: document.querySelector('.tab-btn')}, 'new-pc');
+        });
+    </script>
 </body>
 </html>
