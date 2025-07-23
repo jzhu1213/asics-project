@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PC Imaging & Database Setup</title>
+    <title>PC Imaging & OS Updates</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/components.css">
     <link rel="stylesheet" href="../styles/pages/troubleshooting.css">
@@ -11,7 +11,7 @@
 <body>
     <header>
         <div style="display: flex; justify-content: space-between; align-items: center;">
-            <h1>PC Imaging & Database Setup</h1>
+            <h1>PC Imaging & OS Updates</h1>
             <a href="it-tasks.html" class="btn-secondary" style="text-decoration: none; padding: 0.5rem 1rem; font-size: 0.9rem;">← Back to IT Tasks</a>
         </div>
     </header>
@@ -23,55 +23,45 @@
 
         <div class="tab-container">
             <div class="tab-bar">
-                <button class="tab-btn active" onclick="showTab(event, 'new-pc')">New PC Imaging</button>
-                <button class="tab-btn" onclick="showTab(event, 'refresh-pc')">PC Refresh</button>
-                <button class="tab-btn" onclick="showTab(event, 'database-setup')">Database Setup</button>
+                <button class="tab-btn active" onclick="showTab(event, 'new-pc')">PC Imaging/Update</button>
+                <button class="tab-btn" onclick="showTab(event, 'macbook-imaging')">Macbook Imaging</button>
                 <button class="tab-btn" onclick="showTab(event, 'troubleshooting')">Troubleshooting</button>
             </div>
         </div>
 
         <section id="new-pc" class="procedure-section tab-content" style="display: block;">
-            <h3>New PC Imaging Procedure</h3>
+            <h3>PC Imaging and OS Update Procedure</h3>
             <div class="procedure-steps">
                 <h4>Pre-Imaging Checklist</h4>
                 <ul>
+                    <li>Backup all files to OneDrive</li>
                     <li>Verify PC hardware specifications meet requirements</li>
-                    <li>Ensure all necessary cables and peripherals are available</li>
-                    <li>Check network connectivity in imaging location</li>
-                    <li>Prepare ASICS image USB drive or network boot</li>
+                    <li>Check network connectivity and computer battery</li>
+                    <li>Prepare ASICS image USB drive</li>
                 </ul>
 
                 <h4>Step-by-Step Imaging Process</h4>
                 <ol>
                     <li><strong>Boot from ASICS Image:</strong>
                         <ul>
-                            <li>Insert ASICS image USB drive or connect to network boot</li>
+                            <li>Insert ASICS image USB drive</li>
                             <li>Press F12 during startup to access Boot Menu</li>
                             <li>Select USB drive or network boot option</li>
-                            <li>Wait for imaging environment to load</li>
+                            <li>Wait for Acronis imaging environment to load</li>
                         </ul>
                     </li>
                     <li><strong>Select Imaging Options:</strong>
                         <ul>
-                            <li>Choose "Standard ASICS Image" from menu</li>
+                            <li>Choose most recent ASICS image</li>
                             <li>Select target drive (usually C:)</li>
-                            <li>Confirm "Clean Install" option</li>
-                            <li>Begin imaging process</li>
-                        </ul>
-                    </li>
-                    <li><strong>Monitor Progress:</strong>
-                        <ul>
-                            <li>Imaging typically takes 20-30 minutes</li>
-                            <li>Do not interrupt power or remove USB drive</li>
-                            <li>Wait for completion message</li>
+                            <li>Confirm install and begin process</li>
                         </ul>
                     </li>
                     <li><strong>Post-Imaging Setup:</strong>
                         <ul>
-                            <li>Remove USB drive when prompted</li>
-                            <li>Allow system to restart automatically</li>
-                            <li>Complete Windows initial setup</li>
-                            <li>Log in with temporary credentials</li>
+                            <li>Restart PC once imaging process is complete</li>
+                            <li>Login with admin credentials</li>
+                            <li>Move to Required Software Updates</li>
                         </ul>
                     </li>
                 </ol>
@@ -80,15 +70,15 @@
                 <ol>
                     <li><strong>Windows Updates:</strong>
                         <ul>
-                            <li>Run Windows Update multiple times until no updates remain</li>
+                            <li>Check for and install Windows Update multiple times until no updates remain</li>
                             <li>Restart computer after each major update</li>
                             <li>Verify Windows version is current</li>
                         </ul>
                     </li>
                     <li><strong>Application Updates:</strong>
                         <ul>
-                            <li>Update Microsoft Teams to latest version</li>
-                            <li>Update Google Chrome browser</li>
+                            <li>Update Microsoft Teams to latest version or install correct version</li>
+                            <li>Update and set Google Chrome to default browser</li>
                             <li>Update TeamViewer if installed</li>
                             <li>Verify all ASICS applications are current</li>
                         </ul>
@@ -97,62 +87,27 @@
             </div>
         </section>
 
-        <section id="refresh-pc" class="procedure-section tab-content" style="display: none;">
-            <h3>PC Refresh Procedure</h3>
-            <div class="procedure-steps">
-                <h4>Data Backup (If Required)</h4>
-                <ol>
-                    <li>Identify critical user data to preserve</li>
-                    <li>Backup to network drive or external storage</li>
-                    <li>Document user preferences and settings</li>
-                    <li>Verify backup integrity before proceeding</li>
-                </ol>
-
-                <h4>Refresh Process</h4>
-                <ol>
-                    <li>Follow same boot and imaging steps as new PC</li>
-                    <li>Choose "Refresh" option instead of "Clean Install" if available</li>
-                    <li>Restore backed up data after imaging</li>
-                    <li>Reconfigure user-specific settings</li>
-                </ol>
-            </div>
-        </section>
-
-        <section id="database-setup" class="procedure-section tab-content" style="display: none;">
-            <h3>Database Setup on Existing Machines</h3>
+        <section id="macbook-imaging" class="procedure-section tab-content" style="display: none;">
+            <h3>Macbook Application Installation & Updates</h3>
             <div class="procedure-steps">
                 <h4>Prerequisites</h4>
                 <ul>
-                    <li>Verify machine meets database requirements</li>
-                    <li>Ensure adequate storage space (minimum 50GB free)</li>
-                    <li>Check network connectivity to database server</li>
-                    <li>Obtain database credentials and connection strings</li>
+                    <li>Backup all files to OneDrive</li>
+                    <li>Check network connectivity and computer battery</li>
+                    <li>Prepare ASICS updated applications drive</li>
                 </ul>
 
-                <h4>Database Installation Steps</h4>
+                <h4>Application Steps</h4>
                 <ol>
-                    <li><strong>Install Database Client:</strong>
+                    <li><strong>Install and complete the setup for the following applications:</strong>
                         <ul>
-                            <li>Download appropriate database client software</li>
-                            <li>Run installer with administrative privileges</li>
-                            <li>Configure connection settings</li>
-                            <li>Test connection to database server</li>
-                        </ul>
-                    </li>
-                    <li><strong>Configure Applications:</strong>
-                        <ul>
-                            <li>Update application configuration files</li>
-                            <li>Set database connection parameters</li>
-                            <li>Test application database connectivity</li>
-                            <li>Verify data access permissions</li>
-                        </ul>
-                    </li>
-                    <li><strong>Security Setup:</strong>
-                        <ul>
-                            <li>Configure database encryption if required</li>
-                            <li>Set up user authentication</li>
-                            <li>Test backup and recovery procedures</li>
-                            <li>Document connection details securely</li>
+                            <li>Microsoft Teams</li>
+                            <li>Google Chrome</li>
+                            <li>TeamViewer</li>
+                            <li>Microsoft Office</li>
+                            <li>Adobe Acrobat Reader</li>
+                            <li>BigFix 11.0</li>
+                            <li></li>
                         </ul>
                     </li>
                 </ol>
