@@ -23,12 +23,34 @@
         
         <div class="troubleshoot-container">
             <div class="troubleshoot-grid">
-                
+            
                 <div class="troubleshoot-card">
-                    <span class="priority-indicator priority-medium">Setup</span>
-                    <h3><span class="troubleshoot-icon">🖥️</span>Monitor Station</h3>
+                    <h3><span class="troubleshoot-icon">🖥️</span>Blank Monitor (Mac)</h3>
                     <p>Setting up monitor(s) for extended desktop or mirrored display.</p>
-                    <button class="troubleshoot-btn" onclick="toggleSolution('dual-monitor')">View Guide</button>
+                    <button class="troubleshoot-btn" onclick="toggleSolution('dual-monitor')">View Solution</button>
+                    <div id="dual-monitor" class="solution-details" style="display:none;">
+                        <h4>Step-by-Step Setup:</h4>
+                        <ol>
+                            <li>Connect monitor(s) to docking station using available ports (HDMI, DP)</li>
+                            <li>Power on all devices</li>
+                            <li>Open display options</li>
+                            <li>Choose "Extend" for dual desktop or "Duplicate" for mirroring</li>
+                            <li>Arrange monitors in Display Settings to match physical layout</li>
+                            <li>Set primary monitor if needed</li>
+                        </ol>
+                        <h4>Port Priority (Best to Worst):</h4>
+                        <ol>
+                            <li>DisplayPort (best quality, highest refresh rates)</li>
+                            <li>HDMI (good quality, widely supported)</li>
+                            <li>VGA (analog, lowest quality)</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="troubleshoot-card">
+                    <h3><span class="troubleshoot-icon">🖥️</span>Desktop Station</h3>
+                    <p>Setting up monitor(s) for extended or mirroed desktop display.</p>
+                    <button class="troubleshoot-btn" onclick="toggleSolution('dual-monitor')">View Solution</button>
                     <div id="dual-monitor" class="solution-details" style="display:none;">
                         <h4>Step-by-Step Setup:</h4>
                         <ol>
@@ -49,10 +71,9 @@
                 </div>
                 
                 <div class="troubleshoot-card">
-                    <span class="priority-indicator priority-high">Hardware</span>
                     <h3><span class="troubleshoot-icon">🔌</span>Docking Station</h3>
                     <p>Using docking stations for laptop users with multiple monitors and peripherals.</p>
-                    <button class="troubleshoot-btn" onclick="toggleSolution('docking-station')">View Guide</button>
+                    <button class="troubleshoot-btn" onclick="toggleSolution('docking-station')">View Solution</button>
                     <div id="docking-station" class="solution-details" style="display:none;">
                         <h4>Step-by-Step Setup:</h4>
                         <ol>
@@ -73,10 +94,9 @@
                 </div>
                 
                 <div class="troubleshoot-card">
-                    <span class="priority-indicator priority-medium">Software</span>
                     <h3><span class="troubleshoot-icon">⚙️</span>Display Settings</h3>
                     <p>Configuring resolution, refresh rate, and display arrangement in Windows.</p>
-                    <button class="troubleshoot-btn" onclick="toggleSolution('display-settings')">View Guide</button>
+                    <button class="troubleshoot-btn" onclick="toggleSolution('display-settings')">View Solution</button>
                     <div id="display-settings" class="solution-details" style="display:none;">
                         <h4>Accessing Display Settings:</h4>
                         <ol>
@@ -95,10 +115,9 @@
                 </div>
                 
                 <div class="troubleshoot-card">
-                    <span class="priority-indicator priority-low">Troubleshooting</span>
                     <h3><span class="troubleshoot-icon">🔧</span>Common Problems</h3>
                     <p>Solutions for frequent monitor and display issues.</p>
-                    <button class="troubleshoot-btn" onclick="toggleSolution('common-problems')">View Solutions</button>
+                    <button class="troubleshoot-btn" onclick="toggleSolution('common-problems')">View Solution</button>
                     <div id="common-problems" class="solution-details" style="display:none;">
                         <h4>Problem: Monitor Shows "No Signal"</h4>
                         <ul>
