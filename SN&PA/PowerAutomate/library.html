@@ -10,160 +10,67 @@
 </head>
 <body>
     <header>
-        <h1>PowerAutomate Script Library</h1>
-        <nav class="navbar">
-            <ul>
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../snpa.html">ServiceNow & PowerAutomate</a></li>
-                <li><a href="library.html">Library</a></li>
-                <li><a href="development.html">Development</a></li>
-                <li><a href="info.html">Info</a></li>
-            </ul>
-        </nav>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>PowerAutomate Script Library</h1>
+            <a href="../snpa.html" class="btn-secondary" style="text-decoration: none; padding: 0.5rem 1rem; font-size: 0.9rem;">← Back to SN & PA</a>
+        </div>
     </header>
     <main>
         <section class="pa-library-header">
-            <h2>Script Library</h2>
-            <p>Browse and implement ready-to-use PowerAutomate scripts. Click a card to see details and instructions.</p>
+            <h2>Flow Library</h2>
+            <p>Browse and implement ready-to-use PowerAutomate flows. Click a card to see details and instructions.</p>
+            <p>To add and use any of these flows, go to <a href="https://make.powerautomate.com/#/import" target="_blank">PowerAutomate Flows</a>
+            , navigate to "My flows" and import the zip package you downloaded. Make sure to select the "Configure" wrench, then "Create new"
+            and add your own required resources (e.g. SharePoint site, Microsoft Teams, Outlook etc.).</p>
         </section>
         <div class="pa-library-grid">
-            <!-- Email Notification Script -->
             <div class="pa-script-card">
-                <h3>Email Notification System</h3>
-                <p class="pa-script-desc">Automatically sends email notifications when new tickets are created in ServiceNow or when Excel files are updated.</p>
-                <div class="pa-script-meta">
-                    <span class="pa-trigger">Trigger: When Excel is updated</span>
-                    <span class="pa-compat">Tested on: Windows 10/11</span>
-                </div>
-                <button class="pa-view-details">View Details</button>
-                <div class="pa-script-details" style="display:none;">
-                    <h4>How to Implement</h4>
-                    <ol>
-                        <li>Open PowerAutomate and create new flow</li>
-                        <li>Choose "When a file is created or modified" trigger</li>
-                        <li>Connect to your OneDrive/SharePoint Excel file</li>
-                        <li>Add "Send an email" action</li>
-                        <li>Configure email template with dynamic content</li>
-                        <li>Test the flow with sample data</li>
-                    </ol>
-                    <button class="pa-download">Download Script</button>
-                </div>
+                <h3>Message Follow-Up Reminder</h3>
+                <p class="pa-script-desc">
+                    Set up an automated reminder to follow up on specific important messages.
+                    <br><br>
+                    <b>How to Use:</b> Right click on a Teams message and select "Follow up on a message". Set a date, time, and message,
+                    then workflows will be triggered to send a reminder email.
+                </p>
+                <a href="../../documents/pa-messagereminder.zip" class="pa-download">Add Flow</a>
             </div>
 
-            <!-- File Backup Script -->
             <div class="pa-script-card">
                 <h3>Automatic File Backup</h3>
-                <p class="pa-script-desc">Creates automatic backups of important documents to SharePoint when files are modified in specific folders.</p>
-                <div class="pa-script-meta">
-                    <span class="pa-trigger">Trigger: When file is modified</span>
-                    <span class="pa-compat">Tested on: Office 365</span>
-                </div>
-                <button class="pa-view-details">View Details</button>
-                <div class="pa-script-details" style="display:none;">
-                    <h4>How to Implement</h4>
-                    <ol>
-                        <li>Create new flow with "When a file is created or modified"</li>
-                        <li>Select source folder to monitor</li>
-                        <li>Add "Copy file" action to backup location</li>
-                        <li>Set up conditional logic for file types</li>
-                        <li>Add timestamp to backup files</li>
-                        <li>Configure error handling and notifications</li>
-                    </ol>
-                    <button class="pa-download">Download Script</button>
-                </div>
+                <p class="pa-script-desc">
+                    Create automatic backups of important documents to SharePoint when files are modified in specific folders.
+                    <br><br>
+                    <b>How to Use:</b> Whenever a document is created in your specified SharePoint folder, a backup will be created in your OneDrive</p>
+                <a href="../../documents/pa-automaticfilebackup.zip" class="pa-download">Add Flow</a>
             </div>
 
-            <!-- Data Sync Script -->
             <div class="pa-script-card">
-                <h3>ServiceNow Data Sync</h3>
-                <p class="pa-script-desc">Synchronizes data between ServiceNow and Excel spreadsheets for reporting and analysis purposes.</p>
-                <div class="pa-script-meta">
-                    <span class="pa-trigger">Trigger: Scheduled (daily)</span>
-                    <span class="pa-compat">Tested on: ServiceNow + Excel</span>
-                </div>
-                <button class="pa-view-details">View Details</button>
-                <div class="pa-script-details" style="display:none;">
-                    <h4>How to Implement</h4>
-                    <ol>
-                        <li>Start with "Recurrence" trigger (daily at 6 AM)</li>
-                        <li>Add "Get items" action for ServiceNow</li>
-                        <li>Filter data using OData queries</li>
-                        <li>Add "Create table" action for Excel</li>
-                        <li>Map ServiceNow fields to Excel columns</li>
-                        <li>Add error handling and success notifications</li>
-                    </ol>
-                    <button class="pa-download">Download Script</button>
-                </div>
+                <h3>Out-of-Office Assistant</h3>
+                <p class="pa-script-desc">Automatically set an Out-of-Office reply when receiving messages in Outlook.
+                    <br><br>
+                    <b>How to Use:</b> When you are out of office, this flow will automatically set your Out-of-Office reply and delegate emails/tasks to a colleague.
+                </p>
+                <a href="../../documents/pa-outofoffice.zip" class="pa-download">Add Flow</a>
             </div>
 
-            <!-- Approval Workflow -->
             <div class="pa-script-card">
-                <h3>Document Approval Workflow</h3>
-                <p class="pa-script-desc">Automates document approval process with email notifications and approval tracking for IT requests.</p>
-                <div class="pa-script-meta">
-                    <span class="pa-trigger">Trigger: When form is submitted</span>
-                    <span class="pa-compat">Tested on: SharePoint + Teams</span>
-                </div>
-                <button class="pa-view-details">View Details</button>
-                <div class="pa-script-details" style="display:none;">
-                    <h4>How to Implement</h4>
-                    <ol>
-                        <li>Create flow with "When a new response is submitted"</li>
-                        <li>Add "Start and wait for an approval" action</li>
-                        <li>Configure approval email template</li>
-                        <li>Set up approval timeout (3 business days)</li>
-                        <li>Add conditional logic for approved/rejected paths</li>
-                        <li>Create approval tracking in SharePoint list</li>
-                    </ol>
-                    <button class="pa-download">Download Script</button>
-                </div>
+                <h3>SharePoint Changes Notifier</h3>
+                <p class="pa-script-desc">Notify Teams when someone updates a list or project tracker.</p>
+                <a href="../../documents/pa-sharepointchanges.zip" class="pa-download">Add Flow</a>
             </div>
 
-            <!-- System Monitoring -->
             <div class="pa-script-card">
-                <h3>System Health Monitor</h3>
-                <p class="pa-script-desc">Monitors system performance and sends alerts when thresholds are exceeded or services are down.</p>
-                <div class="pa-script-meta">
-                    <span class="pa-trigger">Trigger: Scheduled (every 15 min)</span>
-                    <span class="pa-compat">Tested on: Windows Server</span>
-                </div>
-                <button class="pa-view-details">View Details</button>
-                <div class="pa-script-details" style="display:none;">
-                    <h4>How to Implement</h4>
-                    <ol>
-                        <li>Set up "Recurrence" trigger every 15 minutes</li>
-                        <li>Add "HTTP" action to check system endpoints</li>
-                        <li>Configure conditional logic for response codes</li>
-                        <li>Add Teams notification for alerts</li>
-                        <li>Create escalation logic for critical issues</li>
-                        <li>Log monitoring results to SharePoint</li>
-                    </ol>
-                    <button class="pa-download">Download Script</button>
-                </div>
+                <h3>Recurring Task Creator</h3>
+                <p class="pa-script-desc">Every Monday, automatically create tasks in Planner or To-Do based on a preset list for the week.</p>
+                <a href="../../documents/pa-recurringtasks.zip" class="pa-download">Add Flow</a>
             </div>
 
-            <!-- User Onboarding -->
             <div class="pa-script-card">
-                <h3>New User Onboarding</h3>
-                <p class="pa-script-desc">Automates the new user setup process including account creation, email setup, and welcome communications.</p>
-                <div class="pa-script-meta">
-                    <span class="pa-trigger">Trigger: When new user is added</span>
-                    <span class="pa-compat">Tested on: Active Directory + Office 365</span>
-                </div>
-                <button class="pa-view-details">View Details</button>
-                <div class="pa-script-details" style="display:none;">
-                    <h4>How to Implement</h4>
-                    <ol>
-                        <li>Start with "When a new item is created" trigger</li>
-                        <li>Add "Create user" action for Office 365</li>
-                        <li>Configure user properties and licenses</li>
-                        <li>Add "Send welcome email" action</li>
-                        <li>Create user folder structure in SharePoint</li>
-                        <li>Add user to appropriate Teams and groups</li>
-                    </ol>
-                    <button class="pa-download">Download Script</button>
-                </div>
+                <h3>End-of-Day Reflection Report</h3>
+                <p class="pa-script-desc">At 4:45 PM, send employees a quick Teams message or Form link asking what they accomplished today and any blockers for tomorrow. Aggregate responses for managers.</p>
+                <a href="../../documents/pa-endofday.zip" class="pa-download">Add Flow</a>
             </div>
+
         </div>
     </main>
     <script src="../../js/main.js"></script>

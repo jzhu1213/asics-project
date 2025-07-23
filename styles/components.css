@@ -7,6 +7,27 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 220px;
+  height: 80px;
+  background: url('../images/asics-logo.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.08;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+header > *, header .snow-header > * {
+  position: relative;
+  z-index: 1;
 }
 
 header h1 {
@@ -32,12 +53,12 @@ nav ul {
   gap: var(--spacing-lg);
   padding: 0;
   margin: 0;
-  list-style: none; /* Remove bullet points */
+  list-style: none;
 }
 
 nav li {
   margin: 0;
-  list-style: none; /* Ensure no bullet points */
+  list-style: none;
 }
 
 nav a {
@@ -249,59 +270,32 @@ nav span {
   }
 }
 
-/* Chatbot Component */
-.chatbot-widget {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    width: 300px;
-    background: var(--white);
-    border-radius: 10px;
-    box-shadow: var(--shadow-light);
-    font-family: inherit;
-    z-index: 9999;
+.hero, .page-header, .features,
+.snow-header, .troubleshoot-header,
+.pa-library-header, .pa-dev-header, .pa-info-header {
+  position: relative;
 }
 
-.chatbot-header {
-    background: var(--primary-color);
-    color: var(--white);
-    padding: 10px 16px;
-    border-radius: 10px 10px 0 0;
-    font-weight: 600;
+.hero::after, .page-header::after, .features::after,
+.snow-header::after, .troubleshoot-header::after,
+.pa-library-header::after, .pa-dev-header::after, .pa-info-header::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 220px;
+  height: 80px;
+  background: url('../images/asics-logo.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.08;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
 }
 
-.chatbot-messages {
-    height: 180px;
-    overflow-y: auto;
-    padding: 10px;
-    font-size: 0.95rem;
-}
-
-.chatbot-input-container {
-    display: flex;
-    border-top: 1px solid #eee;
-}
-
-.chatbot-input {
-    flex: 1;
-    border: none;
-    padding: 8px;
-    border-radius: 0 0 0 10px;
-    outline: none;
-    font-size: 1rem;
-}
-
-.chatbot-send-btn {
-    background: var(--primary-color);
-    color: var(--white);
-    border: none;
-    padding: 8px 16px;
-    border-radius: 0 0 10px 0;
-    cursor: pointer;
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.chatbot-send-btn:hover {
-    background: var(--primary-dark);
+.hero > *, .page-header > *, .features > *,
+.snow-header > *, .troubleshoot-header > *,
+.pa-library-header > *, .pa-dev-header > *, .pa-info-header > * {
+  position: relative;
+  z-index: 1;
 } 

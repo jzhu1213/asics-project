@@ -10,9 +10,9 @@
 
 .pa-library-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: var(--spacing-lg);
-    margin: 0 var(--spacing-lg) var(--spacing-xl) var(--spacing-lg);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .pa-script-card {
@@ -39,14 +39,6 @@
 .pa-script-desc {
     color: #64748b;
     margin-bottom: var(--spacing-sm);
-}
-
-.pa-script-meta {
-    font-size: 0.95rem;
-    color: #475569;
-    margin-bottom: var(--spacing-sm);
-    display: flex;
-    gap: 1.5rem;
 }
 
 .pa-view-details, .pa-download {
@@ -155,6 +147,9 @@
 }
 
 @media (max-width: 900px) {
+    .pa-library-grid {
+        grid-template-columns: 1fr;
+    }
     .pa-library-grid, .pa-dev-steps {
         margin: 0 var(--spacing-sm) var(--spacing-lg) var(--spacing-sm);
     }
