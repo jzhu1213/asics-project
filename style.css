@@ -339,6 +339,7 @@ section h2 {
   position: relative;
 }
 
+/*
 section h2::after {
   content: '';
   position: absolute;
@@ -349,6 +350,7 @@ section h2::after {
   background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
   border-radius: 2px;
 }
+*/
 
 /* Buttons */
 button {
@@ -584,6 +586,7 @@ section h2, .features h2, .quick-start h2, .cta h2 {
   position: relative;
 }
 
+/*
 section h2::after, .features h2::after, .quick-start h2::after, .cta h2::after {
   content: '';
   position: absolute;
@@ -594,6 +597,7 @@ section h2::after, .features h2::after, .quick-start h2::after, .cta h2::after {
   background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
   border-radius: 2px;
 }
+*/
 
 /* IT Tasks Page Styles */
 .page-header {
