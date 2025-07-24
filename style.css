@@ -1172,4 +1172,148 @@ section h2::after, .features h2::after, .quick-start h2::after, .cta h2::after {
     background: #f5f5f5;
     object-fit: contain;
 }
+
+.teamviewer-intro {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+}
+
+.teamviewer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.teamviewer-grid .grid-item {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    font-size: 1.1rem;
+}
+
+.teamviewer-grid .image {
+    background: #fff;
+    padding: 0;
+}
+
+.teamviewer-grid .image img {
+    max-width: 100%;
+    max-height: 160px;
+    display: block;
+    margin: 0 auto;
+}
+
+.teamviewer-altrows {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.altrow {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.altrow-text, .altrow-image {
+    flex: 1 1 0;
+    min-width: 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    font-size: 1.1rem;
+}
+
+.altrow-image {
+    background: #fff;
+    padding: 0;
+}
+
+.altrow-image img {
+    max-width: 100%;
+    max-height: 160px;
+    display: block;
+    margin: 0 auto;
+}
+
+.alt-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.alt-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 0;
+}
+
+.alt-text {
+    flex: 1 1 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    min-width: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.alt-image {
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    background: #fff;
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+.alt-image img {
+    max-width: 100%;
+    max-height: 220px;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+    .altrow {
+        flex-direction: column;
+    }
+    .altrow-text, .altrow-image {
+        min-height: 120px;
+        padding: 1rem;
+    }
+    .alt-content, .alt-content.image-left {
+        flex-direction: column !important;
+    }
+    .alt-text, .alt-image {
+        min-height: 120px;
+        padding: 1rem;
+    }
+}
   
