@@ -21,9 +21,21 @@
             <p>Browse and implement ready-to-use PowerAutomate flows. Click a card to see details and instructions.</p>
             <p>To add and use any of these flows, go to <a href="https://make.powerautomate.com/#/import" target="_blank">PowerAutomate Flows</a>
             , navigate to "My flows" and import the zip package you downloaded. Make sure to select the "Configure" wrench, then "Create new"
-            and add your own required resources (e.g. SharePoint site, Microsoft Teams, Outlook etc.).</p>
+            and establish connections to your own accounts (e.g. SharePoint site, Microsoft Teams, Outlook etc). Without connecting to your own
+            OneDrive, Teams, or whatever app the flow incorporates, the flow will not work.</p>
         </section>
         <div class="pa-library-grid">
+
+            <div class="pa-script-card">
+                <h3>Message Reply Scheduler</h3>
+                <p class="pa-script-desc">Schedule a message reply to send at a specific time. This workflow lets you schedule repsonses in advance, even when you're not available.
+                    <br><br>
+                    <b>How to Use:</b> Right click the Teams message you want to schedule a reply for and choose the "Schedule a reply" flow.
+                    Fill out the date, time, and reply message that you want and submit the form.
+                </p>
+                <a href="https://make.powerautomate.com/environments/Default-1d196867-7880-434a-a2a9-bf8d0f016801/galleries/public/templates/8dfc20ec70f54efcbf3c18cf3e190035/schedule-a-message-reply-to-send-at-the-perfect-time" class="pa-download">Add Flow</a>
+            </div>
+
             <div class="pa-script-card">
                 <h3>Message Follow-Up Reminder</h3>
                 <p class="pa-script-desc">
@@ -32,7 +44,7 @@
                     <b>How to Use:</b> Right click on a Teams message and select "Follow up on a message". Set a date, time, and message,
                     then workflows will be triggered to send a reminder email.
                 </p>
-                <a href="../../documents/pa-messagereminder.zip" class="pa-download">Download Flow</a>
+                <a href="../../documents/pa-messagereminder.zip" class="pa-download">Add Flow</a>
             </div>
 
             <div class="pa-script-card">
@@ -40,35 +52,37 @@
                 <p class="pa-script-desc">
                     Create automatic backups of important documents to SharePoint when files are modified in specific folders.
                     <br><br>
-                    <b>How to Use:</b> Whenever a document is created in your specified SharePoint folder, a backup will be created in your OneDrive</p>
-                <a href="../../documents/pa-automaticfilebackup.zip" class="pa-download">Download Flow</a>
+                    <b>How to Use:</b> Whenever a document is created in your specified SharePoint folder, a backup will be created in your OneDrive.</p>
+                <a href="../../documents/pa-automaticfilebackup.zip" class="pa-download">Add Flow</a>
             </div>
 
             <div class="pa-script-card">
                 <h3>Out-of-Office Assistant</h3>
-                <p class="pa-script-desc">Automatically set an Out-of-Office reply when receiving messages in Outlook.
+                <p class="pa-script-desc">Automatically send an Out-of-Office reply when receiving emails in Outlook.
                     <br><br>
-                    <b>How to Use:</b> When you are out of office, this flow will automatically set your Out-of-Office reply and delegate emails/tasks to a colleague.
+                    <b>How to Use:</b> When you are out of office, this flow will automatically send an Out-of-Office reply. Make sure to turn this on and off when needed.
                 </p>
-                <a href="../../documents/pa-outofoffice.zip" class="pa-download">Download Flow</a>
+                <a href="../../documents/pa-outofoffice.zip" class="pa-download">Add Flow</a>
             </div>
 
             <div class="pa-script-card">
-                <h3>SharePoint Changes Notifier</h3>
-                <p class="pa-script-desc">Notify Teams when someone updates a list or project tracker.</p>
-                <a href="../../documents/pa-sharepointchanges.zip" class="pa-download">Download Flow</a>
+                <h3>Outlook Daily Reminders</h3>
+                <p class="pa-script-desc">Get daily reminders from Outlook with whatever message you want.
+                    <br><br>
+                    <b>How to Use:</b> This is an automatic flow, so it will trigger on its own. But first, after adding the flow, you must go into it and
+                    add the email address, subject, and message that you want to send.
+                </p>
+                <a href="https://make.powerautomate.com/environments/Default-1d196867-7880-434a-a2a9-bf8d0f016801/galleries/public/templates/cd332684e5c544ddadd99be8bfa47d1a/get-daily-reminders-from-your-outlookcom-email" class="pa-download">Add Flow</a>
             </div>
 
             <div class="pa-script-card">
-                <h3>Recurring Task Creator</h3>
-                <p class="pa-script-desc">Every Monday, automatically create tasks in Planner or To-Do based on a preset list for the week.</p>
-                <a href="../../documents/pa-recurringtasks.zip" class="pa-download">Download Flow</a>
-            </div>
-
-            <div class="pa-script-card">
-                <h3>End-of-Day Reflection Report</h3>
-                <p class="pa-script-desc">At 4:45 PM, send employees a quick Teams message or Form link asking what they accomplished today and any blockers for tomorrow. Aggregate responses for managers.</p>
-                <a href="../../documents/pa-endofday.zip" class="pa-download">Download Flow</a>
+                <h3>Share Emails in Teams</h3>
+                <p class="pa-script-desc">This workflow lets you automatically forward emails based on specific criteria—like recipient address, subject—directly to a designated Teams channel.
+                    <br><br>
+                    <b>How to Use:</b> When adding the flow, go through each field and input your desired information. Make sure th recipient, sender, 
+                    subject, Team, and Channel are all correct so the right emails get sent to the right place.
+                </p>
+                <a href="https://make.powerautomate.com/environments/Default-1d196867-7880-434a-a2a9-bf8d0f016801/galleries/public/templates/190c5a56070e4a8b802089be6455553e/share-your-emails-with-co-workers-in-teams-channel" class="pa-download">Add Flow</a>
             </div>
 
         </div>
