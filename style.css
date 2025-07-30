@@ -1167,7 +1167,7 @@ section h2::after, .features h2::after, .quick-start h2::after, .cta h2::after {
 }
 
 .stacked-image {
-    width: 100%;
+    width: auto;
     max-width: 500px;
     min-width: 300px;
     height: auto;
