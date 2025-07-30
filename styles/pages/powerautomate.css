@@ -104,6 +104,16 @@
     color: #64748b;
 }
 
+.pa-dev-img-screenshot {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin: 1rem 0;
+    display: block;
+}
+
 .pa-templates {
     margin: var(--spacing-lg) var(--spacing-lg) var(--spacing-xl) var(--spacing-lg);
 }

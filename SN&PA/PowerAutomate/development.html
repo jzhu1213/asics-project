@@ -24,7 +24,7 @@
             <div class="pa-dev-step">
                 <h3>Step 1a: Access PowerAutomate</h3>
                 <p>Begin by accessing the PowerAutomate platform through your Microsoft 365 account.</p>
-                <div class="pa-dev-img">🖥️ Create Tab</div>
+                <img src="../../images/dev-1a.png" class="pa-dev-img-screenshot">
                 <ol>
                     <li>Go to <a href="https://flow.microsoft.com" target="_blank">flow.microsoft.com</a></li>
                     <li>Sign in with your ASICS Microsoft 365 credentials</li>
@@ -36,7 +36,7 @@
             <div class="pa-dev-step">
                 <h3>Step 1b: Create with Copilot</h3>
                 <p>Alternatively, create a flow with Microsoft's Copilot.</p>
-                <div class="pa-dev-img">🖥️ Copilot Create</div>
+                <img src="../../images/dev-1b.png" class="pa-dev-img-screenshot">
                 <ol>
                     <li>Stay on the "Home" tab of Power Automate</li>
                     <li>Use Microsoft's Copilot to create a flow just by describing what you want to do</li>
@@ -46,7 +46,7 @@
             <div class="pa-dev-step">
                 <h3>Step 2: Choose Your Trigger</h3>
                 <p>Select the event that will start your automation. This is the foundation of your flow.</p>
-                <div class="pa-dev-img">⚡ Screenshot: Trigger selection page showing popular triggers</div>
+                <img src="../../images/dev-2.png" class="pa-dev-img-screenshot">
                 <ul>
                     <li><strong>Manual triggers:</strong> "Manually trigger a flow" - starts when you click a button</li>
                     <li><strong>File triggers:</strong> "When a file is created or modified" - responds to file changes</li>
@@ -59,7 +59,7 @@
             <div class="pa-dev-step">
                 <h3>Step 3: Add Actions</h3>
                 <p>Build your automation by adding actions that perform specific tasks after the trigger occurs.</p>
-                <div class="pa-dev-img">🔧 Screenshot: Action selection with popular actions like "Send an email"</div>
+                <img src="../../images/dev-3.png" class="pa-dev-img-screenshot">
                 <ol>
                     <li>Click the "+" button after your trigger</li>
                     <li>Search for the action you need (e.g., "Send an email")</li>
@@ -72,7 +72,7 @@
             <div class="pa-dev-step">
                 <h3>Step 4: Add Conditions and Logic</h3>
                 <p>Make your flow intelligent by adding conditional logic and decision points.</p>
-                <div class="pa-dev-img">🧠 Screenshot: Condition builder with if/then/else logic</div>
+                <img src="../../images/dev-4.png" class="pa-dev-img-screenshot">
                 <ul>
                     <li><strong>Conditions:</strong> Add "Condition" action to create if/then logic</li>
                     <li><strong>Switch statements:</strong> Use "Switch" for multiple possible outcomes</li>
@@ -82,80 +82,53 @@
             </div>
 
             <div class="pa-dev-step">
-                <h3>Step 5: Test Your Flow</h3>
-                <p>Thoroughly test your automation to ensure it works correctly before deploying.</p>
-                <div class="pa-dev-img">✅ Screenshot: Flow testing interface with run history</div>
+                <h3>Step 5: Test, Deploy and Monitor</h3>
+                <p>Thoroughly test your automation, deploy it, and set up monitoring to track its performance and catch issues.</p>
                 <ol>
-                    <li>Click "Test" in the top right corner</li>
-                    <li>Choose "Manually" to test immediately</li>
-                    <li>Provide test data if prompted</li>
-                    <li>Review the execution results</li>
-                    <li>Check each step for errors or unexpected behavior</li>
-                    <li>Fix any issues and retest</li>
+                    <li><strong>Test your flow:</strong>
+                        <ul>
+                            <li>Click "Test" in the top right corner</li>
+                            <li>Choose "Manually" to test immediately</li>
+                            <li>Provide test data if prompted</li>
+                            <li>Review the execution results</li>
+                            <li>Check each step for errors or unexpected behavior</li>
+                            <li>Fix any issues and retest</li>
+                        </ul>
+                    </li>
+                    <li><strong>Deploy your flow:</strong>
+                        <ul>
+                            <li>Click "Save" then "Turn on" to deploy</li>
+                            <li>Set up notifications for error alerts on failed runs</li>
+                            <li>Document your flow with descriptions and comments for future reference</li>
+                        </ul>
+                    </li>
+                    <li><strong>Monitor performance:</strong>
+                        <ul>
+                            <li>Check the "Analytics" tab regularly</li>
+                            <li>Monitor run statistics and success rates</li>
+                            <li>Set up alerts for any failures or issues</li>
+                        </ul>
+                    </li>
+                    <br>For some helpful pre-built flows, check out <a href="library.html">My Flow Library</a>
+                    or go to <a href="https://make.powerautomate.com/environments/Default-1d196867-7880-434a-a2a9-bf8d0f016801/templates" target="_blank">Microsoft Public Templates</a>.
                 </ol>
             </div>
-
-            <div class="pa-dev-step">
-                <h3>Step 6: Deploy and Monitor</h3>
-                <p>Deploy your flow and set up monitoring to track its performance and catch issues.</p>
-                <div class="pa-dev-img">📊 Screenshot: Flow analytics dashboard showing run statistics</div>
-                <ul>
-                    <li><strong>Save and activate:</strong> Click "Save" then "Turn on" to deploy</li>
-                    <li><strong>Set up notifications:</strong> Configure error alerts for failed runs</li>
-                    <li><strong>Monitor performance:</strong> Check the "Analytics" tab regularly</li>
-                    <li><strong>Document your flow:</strong> Add descriptions and comments for future reference</li>
-                </ul>
-            </div>
         </div>
-        <section class="pa-templates">
-            <h3>Starter Templates</h3>
-            <div class="pa-template-card">
-                <h4>📧 Email Notification Template</h4>
-                <p>Trigger: When a file is modified in SharePoint<br>
-                Actions: Send email notification with file details<br>
-                <strong>Use case:</strong> Notify team when important documents are updated</p>
-                <button class="pa-download">Download Template</button>
-            </div>
-            <div class="pa-template-card">
-                <h4>📊 Data Sync Template</h4>
-                <p>Trigger: Scheduled (daily at 6 AM)<br>
-                Actions: Copy data from one system to another<br>
-                <strong>Use case:</strong> Sync data between ServiceNow and Excel</p>
-                <button class="pa-download">Download Template</button>
-            </div>
-            <div class="pa-template-card">
-                <h4>✅ Approval Workflow Template</h4>
-                <p>Trigger: When form is submitted<br>
-                Actions: Send approval request, wait for response, process result<br>
-                <strong>Use case:</strong> IT equipment request approvals</p>
-                <button class="pa-download">Download Template</button>
-            </div>
-        </section>
-        <section class="pa-faq">
-            <h3>Frequently Asked Questions</h3>
-            <div class="pa-faq-item">
-                <strong>Q: How many actions can I add to a single flow?</strong>
-                <p>A: PowerAutomate allows up to 300 actions per flow. For complex automations, consider breaking them into multiple flows that work together.</p>
-            </div>
-            <div class="pa-faq-item">
-                <strong>Q: Can I use PowerAutomate with external systems?</strong>
-                <p>A: Yes! PowerAutomate supports 400+ connectors including Salesforce, Slack, Google Workspace, and custom HTTP requests for any web API.</p>
-            </div>
-            <div class="pa-faq-item">
-                <strong>Q: How do I handle errors in my flows?</strong>
-                <p>A: Use the "Configure run after" settings to add error handling. You can also add "Scope" actions to group related steps and handle failures gracefully.</p>
-            </div>
-            <div class="pa-faq-item">
-                <strong>Q: What's the difference between a flow and a solution?</strong>
-                <p>A: A flow is a single automation. A solution is a container that can hold multiple flows, custom connectors, and other components for easy deployment and management.</p>
-            </div>
-            <div class="pa-faq-item">
-                <strong>Q: How can I share my flows with other team members?</strong>
-                <p>A: You can share flows by adding team members as owners, or export/import flows as solutions. For organization-wide deployment, use Power Platform admin center.</p>
-            </div>
-            <div class="pa-faq-item">
-                <strong>Q: What are the best practices for naming flows?</strong>
-                <p>A: Use descriptive names like "Email Notification - New ServiceNow Tickets" or "Daily Backup - Finance Documents". Include the trigger and main action in the name.</p>
+        <section class="pa-copilot">
+            <h3>🤖 Microsoft Copilot for PowerAutomate</h3>
+            <div class="pa-copilot-content">
+                <div class="pa-copilot-text">
+                    <p>Microsoft Copilot can help you create PowerAutomate flows using natural language. Simply describe what you want to automate, and Copilot will generate the flow for you.</p>
+                    <ul>
+                        <li><strong>Natural Language:</strong> Describe your automation in plain English</li>
+                        <li><strong>Smart Suggestions:</strong> Get intelligent recommendations for actions and triggers</li>
+                        <li><strong>Error Prevention:</strong> Copilot helps avoid common mistakes</li>
+                        <li><strong>Learning Tool:</strong> Great for beginners to understand flow structure</li>
+                    </ul>
+                </div>
+                <div class="pa-copilot-image">
+                    <img src="../../images/dev-copilot.png" alt="Microsoft Copilot interface for PowerAutomate" class="pa-dev-img-screenshot">
+                </div>
             </div>
         </section>
     </main>

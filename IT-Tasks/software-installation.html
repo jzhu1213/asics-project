@@ -3,181 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Installation - IT Info Center</title>
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/components.css">
+    <title>Software Systems Overview - IT Info Center</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <header>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <h1>Software Installation</h1>
-            <a href="it-tasks.html" class="btn-secondary" style="text-decoration: none; padding: 0.5rem 1rem; font-size: 0.9rem;">← Back to IT Tasks</a>
-        </div>
+        <h1>ASICS IT</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../SN&PA/snpa.html">ServiceNow & PowerAutomate</a></li>
+                <li><a href="it-tasks.html">IT Tasks</a></li>
+                <li><a href="../Troubleshooting/troubleshooting.html">Troubleshooting</a></li>
+            </ul>
+        </nav>
     </header>
+    
     <main>
         <section class="page-header">
-            <h2>Software Installation</h2>
-            <p>Standard procedures for installing and configuring software across ASICS systems</p>
+            <h2>Software Systems Overview</h2>
+            <p>Key software platforms and systems used across ASICS operations</p>
         </section>
-        
+
         <div class="troubleshoot-container">
             <div class="troubleshoot-grid">
                 <div class="troubleshoot-card">
-                    <span class="priority-indicator priority-high">Standard</span>
-                    <h3><span class="troubleshoot-icon">💼</span>Office Applications</h3>
-                    <p>Microsoft Office 365, Adobe Creative Suite, and other productivity software.</p>
-                    <a href="#office-install" class="troubleshoot-btn">View Procedure</a>
+                    <span class="priority-indicator priority-high">IT Service Management</span>
+                    <h3><span class="troubleshoot-icon">🎫</span>ServiceNow</h3>
+                    <p>Our primary IT service management platform for incident tracking, change management, and service requests. Used by IT teams to manage and resolve technical issues efficiently. Provides a centralized system for all IT-related activities and helps maintain service quality standards.</p>
+                    <ul class="bulleted">
+                        <li>Incident and problem management with automated workflows</li>
+                        <li>Change request workflows with approval processes</li>
+                        <li>Service catalog and self-service portal for users</li>
+                        <li>Asset and configuration management database</li>
+                        <li>Knowledge base and documentation management</li>
+                        <li>Reporting and analytics for service performance</li>
+                    </ul>
                 </div>
                 
                 <div class="troubleshoot-card">
-                    <span class="priority-indicator priority-medium">Security</span>
-                    <h3><span class="troubleshoot-icon">🛡️</span>Security Software</h3>
-                    <p>Antivirus, VPN clients, and security tools installation procedures.</p>
-                    <a href="#security-install" class="troubleshoot-btn">View Procedure</a>
+                    <span class="priority-indicator priority-high">Enterprise Resource Planning</span>
+                    <h3><span class="troubleshoot-icon">📊</span>SAP/FMS</h3>
+                    <p>Our enterprise resource planning system that manages financial data, inventory, and business processes. The Financial Management System (FMS) handles accounting, reporting, and financial operations. This system is the backbone of our business operations and financial management.</p>
+                    <ul class="bulleted">
+                        <li>Financial accounting and reporting with real-time data</li>
+                        <li>Inventory and supply chain management tracking</li>
+                        <li>Business process automation and workflow management</li>
+                        <li>Data analytics and business intelligence insights</li>
+                        <li>Compliance and regulatory reporting capabilities</li>
+                        <li>Integration with other business systems and applications</li>
+                    </ul>
                 </div>
                 
                 <div class="troubleshoot-card">
-                    <span class="priority-indicator priority-low">Specialized</span>
-                    <h3><span class="troubleshoot-icon">🔧</span>Department Software</h3>
-                    <p>Department-specific applications and tools for different teams.</p>
-                    <a href="#dept-install" class="troubleshoot-btn">View Procedure</a>
+                    <span class="priority-indicator priority-high">Cloud Platform</span>
+                    <h3><span class="troubleshoot-icon">☁️</span>Microsoft Azure</h3>
+                    <p>Our cloud computing platform that provides infrastructure, platform, and software services. Hosts applications, data storage, and provides scalable computing resources for ASICS operations. Enables flexible and cost-effective IT infrastructure management.</p>
+                    <ul class="bulleted">
+                        <li>Cloud infrastructure and hosting for applications</li>
+                        <li>Data storage and backup solutions with redundancy</li>
+                        <li>Application development and deployment tools</li>
+                        <li>Identity and access management with Azure AD</li>
+                        <li>Virtual machines and container services</li>
+                        <li>Monitoring and security services for cloud resources</li>
+                    </ul>
                 </div>
                 
                 <div class="troubleshoot-card">
-                    <span class="priority-indicator priority-high">Updates</span>
-                    <h3><span class="troubleshoot-icon">🔄</span>Software Updates</h3>
-                    <p>Procedures for updating existing software and managing patches.</p>
-                    <a href="#updates" class="troubleshoot-btn">View Procedure</a>
+                    <span class="priority-indicator priority-high">Communication & Collaboration</span>
+                    <h3><span class="troubleshoot-icon">💬</span>Outlook & Teams</h3>
+                    <p>Microsoft 365 communication and collaboration tools. Outlook handles email, calendar, and contacts, while Teams provides chat, video conferencing, and team collaboration features. These tools enable seamless communication and teamwork across the organization.</p>
+                    <ul class="bulleted">
+                        <li>Email and calendar management with shared calendars</li>
+                        <li>Video conferencing and meeting scheduling</li>
+                        <li>Team chat and file sharing capabilities</li>
+                        <li>Integration with other Microsoft 365 applications</li>
+                        <li>Mobile access and synchronization across devices</li>
+                        <li>Security features including encryption and compliance</li>
+                    </ul>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <span class="priority-indicator priority-high">Network Security</span>
+                    <h3><span class="troubleshoot-icon">🔒</span>Cisco VPN</h3>
+                    <p>Virtual Private Network solution that provides secure remote access to ASICS network resources. Enables employees to work securely from anywhere while maintaining access to internal systems and data. Ensures data protection and secure connectivity for remote workers.</p>
+                    <ul class="bulleted">
+                        <li>Secure remote network access with encryption</li>
+                        <li>Encrypted data transmission for privacy protection</li>
+                        <li>Multi-factor authentication for enhanced security</li>
+                        <li>Access to internal resources and applications</li>
+                        <li>Automatic connection management and failover</li>
+                        <li>Compliance with security policies and regulations</li>
+                    </ul>
                 </div>
             </div>
         </div>
-        
-        <!-- Detailed Procedures -->
-        <section id="office-install" class="procedure-section">
-            <h3>Office Applications Installation</h3>
-            <div class="procedure-steps">
-                <h4>Microsoft Office 365</h4>
-                <ol>
-                    <li>Verify user has valid Office 365 license</li>
-                    <li>Download Office 365 installer from Microsoft portal</li>
-                    <li>Run installer as administrator</li>
-                    <li>Choose "Install for this user only" option</li>
-                    <li>Wait for installation to complete (15-20 minutes)</li>
-                    <li>Sign in with user's ASICS email credentials</li>
-                    <li>Verify all applications launch correctly</li>
-                </ol>
-                
-                <h4>Adobe Creative Suite</h4>
-                <ol>
-                    <li>Check Adobe license availability</li>
-                    <li>Download Creative Cloud installer</li>
-                    <li>Install Creative Cloud application</li>
-                    <li>Sign in with Adobe account</li>
-                    <li>Install required applications (Photoshop, Illustrator, etc.)</li>
-                    <li>Configure workspace settings</li>
-                </ol>
-            </div>
-        </section>
-        
-        <section id="security-install" class="procedure-section">
-            <h3>Security Software Installation</h3>
-            <div class="procedure-steps">
-                <h4>Antivirus Software</h4>
-                <ol>
-                    <li>Uninstall any existing antivirus software</li>
-                    <li>Download approved antivirus installer</li>
-                    <li>Run installer with administrative privileges</li>
-                    <li>Configure real-time protection settings</li>
-                    <li>Schedule regular scan times</li>
-                    <li>Update virus definitions</li>
-                </ol>
-                
-                <h4>VPN Client Setup</h4>
-                <ol>
-                    <li>Download VPN client software</li>
-                    <li>Install with default settings</li>
-                    <li>Configure connection settings</li>
-                    <li>Test connection to ASICS network</li>
-                    <li>Set up automatic connection rules</li>
-                </ol>
-            </div>
-        </section>
-        
-        <section id="dept-install" class="procedure-section">
-            <h3>Department-Specific Software</h3>
-            <div class="procedure-steps">
-                <h4>Finance Department</h4>
-                <ul>
-                    <li>QuickBooks Enterprise</li>
-                    <li>SAP Business One</li>
-                    <li>Excel add-ins for financial modeling</li>
-                </ul>
-                
-                <h4>Marketing Department</h4>
-                <ul>
-                    <li>Canva Pro</li>
-                    <li>Mailchimp</li>
-                    <li>Social media management tools</li>
-                </ul>
-                
-                <h4>IT Department</h4>
-                <ul>
-                    <li>Remote desktop tools</li>
-                    <li>Network monitoring software</li>
-                    <li>System administration utilities</li>
-                </ul>
-            </div>
-        </section>
-        
-        <section id="updates" class="procedure-section">
-            <h3>Software Update Procedures</h3>
-            <div class="procedure-steps">
-                <h4>Automatic Updates</h4>
-                <ol>
-                    <li>Configure Windows Update settings</li>
-                    <li>Set update schedule (non-business hours)</li>
-                    <li>Enable automatic restart policies</li>
-                    <li>Monitor update success rates</li>
-                </ol>
-                
-                <h4>Manual Updates</h4>
-                <ol>
-                    <li>Check for available updates</li>
-                    <li>Review update notes and compatibility</li>
-                    <li>Backup important data</li>
-                    <li>Install updates during maintenance window</li>
-                    <li>Test functionality after update</li>
-                </ol>
-            </div>
+
+        <section class="system-integration">
+            <h3>System Integration</h3>
+            <p>These systems work together to provide a comprehensive digital workplace. ServiceNow manages IT services, SAP/FMS handles business operations, Azure provides cloud infrastructure, Outlook/Teams enables communication, and Cisco VPN ensures secure access.</p>
         </section>
     </main>
-    
-    <style>
-        .procedure-section {
-            margin: 2rem;
-            padding: 2rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        .procedure-steps {
-            margin-top: 1rem;
-        }
-        
-        .procedure-steps h4 {
-            color: #2563eb;
-            margin: 1.5rem 0 0.5rem 0;
-        }
-        
-        .procedure-steps ol, .procedure-steps ul {
-            margin-left: 1.5rem;
-            line-height: 1.6;
-        }
-        
-        .procedure-steps li {
-            margin-bottom: 0.5rem;
-        }
-    </style>
+
+    <script src="../js/main.js"></script>
 </body>
 </html> 
