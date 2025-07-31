@@ -21,7 +21,7 @@ This website provides quick access to:
 
 ## Technology
 
-Built with vanilla HTML, CSS, and JavaScript for maximum compatibility and easy deployment across ASICS internal systems.
+Built with vanilla HTML, CSS, and JavaScript for maximum compatibility and easy deployment.
 
 ## Project Status
 
