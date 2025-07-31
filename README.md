@@ -1,24 +1,28 @@
 # ASICS Boston IT Info Center
 
-My name is James Zhu and I am an IT Analyst Intern for ASICS this Summer 2025. This project show the cumulative learning and knowledge I have gained
-throughout my time with the company. My responsibilities as an intern include managing ServiceNow workflows, diagnosing and resolving IT needs, and 
-this project! More to come...
+A comprehensive internal knowledge base and resource center for ASICS Boston IT operations. This project serves as a centralized hub for IT staff documentation, troubleshooting guides, and process workflows.
+
+## Overview
+
+This website provides quick access to:
+- **ServiceNow & PowerAutomate** - Training materials, library resources, and development guides
+- **IT Tasks** - Standard operating procedures and staff responsibilities 
+- **Troubleshooting** - Step-by-step solutions for common technical issues
+- **Search Functionality** - Site-wide search across all documentation
 
 ## Features
 
-ServiceNow and PowerAutomate Introduction
+- Responsive design optimized for desktop and mobile devices
+- Interactive troubleshooting guides with visual aids
+- Comprehensive ServiceNow workflow documentation
+- PowerAutomate script library and development resources
+- Asset management and inventory tracking procedures
+- Meeting room setup and troubleshooting guides
 
-IT Tasks Overview
+## Technology
 
-Troubleshooting Assistance
+Built with vanilla HTML, CSS, and JavaScript for maximum compatibility and easy deployment across ASICS internal systems.
 
-## Contributing
+## Project Status
 
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+Active development - Intern project by Jimmy Zhu (IT Analyst Intern, Summer 2025)
