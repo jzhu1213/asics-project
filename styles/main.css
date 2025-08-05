@@ -61,7 +61,6 @@ main {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-right: 2rem;
 }
 
 .search-container label {
@@ -168,9 +167,8 @@ mark {
 
 /* Update navbar to accommodate search */
 nav {
-    margin-top: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
@@ -187,30 +185,17 @@ nav ul {
     flex: 1;
 }
 
-.search-container {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-shrink: 0;
-}
+/* Search container is now in header-top, not nav */
 
 @media (max-width: 768px) {
-    nav {
+    .header-top {
         flex-direction: column;
-        align-items: stretch;
         gap: 1rem;
-    }
-    
-    nav ul {
-        order: 1;
-        justify-content: center;
-        flex-wrap: wrap;
+        align-items: stretch;
     }
     
     .search-container {
-        order: 2;
         width: 100%;
-        margin-top: 0.5rem;
     }
     
     .search-input {
@@ -218,9 +203,24 @@ nav ul {
         min-width: 0;
         flex: 1;
     }
+    
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 900px) {
+    .header-top {
+        gap: 1rem;
+    }
+    
     nav {
         justify-content: center;
     }
@@ -229,15 +229,11 @@ nav ul {
         flex-wrap: wrap;
         gap: 1rem;
     }
-    
-    .search-container {
-        margin-right: 0;
-    }
 }
 
 @media (max-width: 480px) {
-    .search-container {
-        margin-top: 0.5rem;
+    .header-top {
+        gap: 0.75rem;
     }
     
     .search-input {
