@@ -17,7 +17,7 @@ This website provides quick access to:
 - Comprehensive ServiceNow workflow documentation
 - PowerAutomate script library and development resources
 - Asset management and inventory tracking procedures
-- Meeting room setup and troubleshooting guides
+- General troubleshooting guides and practices
 
 ## Technology
 
