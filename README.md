@@ -25,4 +25,4 @@ Built with vanilla HTML, CSS, and JavaScript for maximum compatibility and easy 
 
 ## Project Status
 
-Active development - Intern project by Jimmy Zhu (IT Analyst Intern, Summer 2025)
+Completed/Inactive - Intern project by Jimmy Zhu (IT Analyst Intern, Summer 2025)
